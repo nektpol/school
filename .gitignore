@@ -1,5 +1,7 @@
-B Eksamino/ΓΛΩΣΣΑ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ ΙΙ (C++14) - ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΕΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ/askisi1/ConsoleApplication1/ConsoleApplication1.exe
-B Eksamino/ΓΛΩΣΣΑ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ ΙΙ (C++14) - ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΕΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ/askisi1/ConsoleApplication1/ConsoleApplication1.ilk
-B Eksamino/ΓΛΩΣΣΑ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ ΙΙ (C++14) - ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΕΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ/askisi1/ConsoleApplication1/ConsoleApplication1.obj
-B Eksamino/ΓΛΩΣΣΑ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ ΙΙ (C++14) - ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΕΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ/askisi1/ConsoleApplication1/ConsoleApplication1.pdb
-B Eksamino/ΓΛΩΣΣΑ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ ΙΙ (C++14) - ΑΝΤΙΚΕΙΜΕΝΟΣΤΡΕΦΗΣ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΣ/askisi1/ConsoleApplication1/vc140.pdb
+# Ignore Visual Studio temporary files, build results
+
+*.exe
+*.dll
+*.ilk
+*.pdb
+*.obj
