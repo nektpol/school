@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>προβολή περιεχομένου με την χρήση του alert() ή window.alert() </title>
+		<meta name="keywords" content="output alert, javascript, προβολή περιεχομένου"/>
+		<meta name="author" content="Jane Jansen" />
+		
+		<style>
+
+            div{
+                width:400px;
+                margin:0 auto;
+                box-shadow:0px 0px 4px #3333335e;
+                
+            }
+            h1{
+                background-color:#333333;
+                color:aliceblue;
+                text-align:center;
+            }
+            h1, p{
+                padding:10px;
+            }
+            p{
+                text-align:justify;
+                word-break:break-all;
+            }
+        </style>
+			
+	</head>
+	<body>
+        <div>
+		<h1>Eιδη output-prompt() method</h1>
+		<p>Οι μέθοδοι προτροπής παραθύρου εμφανίζουν ένα παράθυρο προτροπής με μια είσοδο στον browser σας για να λάβετε τιμές εισόδου και τα δεδομένα εισόδου μπορούν να αποθηκευτούν σε μια μεταβλητή. Η μέθοδος prompt() δέχεται δύο ορίσματα. Το δεύτερο όρισμα είναι προαιρετικό. </p>	
+        <p id = "demo"></p>
+         </div>
+		<script>
+		let age=prompt('Enter number', 'number goes here');
+        //μετατροπή αριθμού συμβολοσειράς σε αριθμό
+        let ageInput=Number(age);
+		document.getElementById('demo').innerHTML= `Εισαι ${ageInput} χρονών και ο τυπος δεδομένων της μεταβλητης ageInput ειναι ${typeof ageInput}`; 
+		</script>
+			
+	</body>
+
+</html>

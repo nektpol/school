@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+    <form autocomplete="on">
+    <p>
+        <label for="pwd">Kvdikos</label>
+        <br>
+        <input type="password" id="pwd" name="pwd">
+    </p>
+    <p>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label>
+        <br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label>
+        <br>
+        <input type="radio" id="JavaScript" name="fav_language" value="JavaScript">
+        <label for="JavaScript">JavaScript</label>
+    </p>
+    <p>
+        <input type="checkbox" id="lesson1" name="lesson1" value="Βασεις Δεδομένων">
+        <label for="lesson1">Βασεις Δεδομένων</label>
+        <br>
+        <input type="checkbox" id="lesson2" name="lesson2" value="Αρχιτεκτονική">
+        <label for="lesson2">Αρχιτεκτονική</label>
+        <br>
+        <input type="checkbox" id="lesson3" name="lesson3" value="Usability">
+        <label for="lesson3">Usability</label>
+        <br>
+    </p>
+    <p>
+        <label for="favcolor">Epilekste xroma</label>
+        <br>
+        <input onchange="alert(this.value)" type="color" id="favcolor" name="favcolor">
+    </p>
+    <p>
+        <label for="birthday">Ημ/νια και ωρα γενεθλίων</label>
+        <br>
+        <input type="datetime-local" id="birthday" name="birthday">
+    </p>
+    <p>
+        <label for="email">Ηλ. Διεύθυνση</label>
+        <br>
+        <input type="email" id="email" name="email">
+    </p>
+    <p>
+        <label for="myfile">Ανεβάστε τα αρχεία σας</label>
+        <br>
+        <input type="file" id="myfile" name="myfile">
+    </p>
+    <p>
+        <label for="quantity">Ποσότητα</label>
+        <br>
+        <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="10">
+    </p>
+    <p>
+        <label for="price">Τιμή</label>
+        <br>
+        <input onchange="alert(this.value)" type="range" id="price" min="0" max="100" step="2">
+    </p>
+    <p>
+        <label for="gsearch">Αναζήτηση</label>
+        <br>
+        <input type="search" name="gsearch" id="gsearch">
+    </p>
+    <p>
+        <label for="site">URL</label>
+        <br>
+        <input type="url" name="site" id="site">
+    </p>
+    <p>
+        <label for="cars">Choose a car</label>
+        <select name="cars" id="cars" size="3">
+            <option value="volvo">Volvo</option>
+            <option value="saab" selected>Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+        <br>
+    </p>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

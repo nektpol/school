@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <h3>The length of the string is:</h3>
+    <p id="length"></p>
+    <h3>Εμφάνιση του πρώτου χαρακτήρα συμβολοσειράς</h3>
+    <p id="firstLetter"></p>
+    <h3>Εμφάνιση του δεύτερου χαρακτήρα συμβολοσειράς</h3>
+    <p id="secondLetter"></p>
+    <h3>Εμφάνιση του τελευταίου χαρακτήρα συμβολοσειράς</h3>
+    <p id="lastLetter"></p>
+    <h3>Εμφάνιση αρ.ευρετηρίου τελευταίου χαρακτήρα συμβολοσειράς</h3>
+    <p id="lastIndex"></p>
+    <h3> Μετατροπή συμβολοσειράς σε κεφαλαία</h3>
+<p id="upper"></p>
+<h3> Μετατροπή συμβολοσειράς σε πεζά</h3>
+<p id="lower"></p>
+<h3>Συνένωση συμβολοσειρών</h3>
+<p id="concat"></p>
+<h3>Αποκοπή substring απο ενα string με την χρήση της μεθόδου slice(startIndexNo,lastIndexNo)</h3>
+<p id="slice"></p>
+<h3>Αποκοπή substring απο ενα string με την χρήση της μεθόδου substr(startIndexNo,NoOfCharactersIncluded)</h3>
+<p id="substr"></p>
+<h3>Αποκοπή substring απο ενα string με την χρήση της μεθόδου substring(startIndexNo,lastIndexNotIncluded)</h3>
+<p id="substring"></p>
+<h3>Μετατροπή string σε πίνακα με την μέθοδο split()- μετατροπή ολων των χαρακτήρων σε τιμές πίνακα</h3>
+<p id="splitChar"></p>
+<h3>Μετατροπή string σε πίνακα με την μέθοδο split()- μετατροπή των λέξεων του string σε τιμές πίνακα</h3>
+<p id="splitWords"></p>
+<p id="splitIntoArray"></p>
+<h3>trim()Αφαίρεση κενών διαστημάτων πριν και μετα απο μια συμβολοσειρά </h3>
+<p id="trim"></p>
+<p id="trim2"></p>
+<h3>includes():Έλεγχος εντοπισμού τμήματος συμβολοσειράς</h3>
+<p id="includes"></p>
+<h3>replace(existingString, replacingString) Αντικατάσταση τμήματος συμβολοσειράς με μια άλλη</h3>
+<p id="replace"></p>
+<h3>charAt(IndexNo): Εντοπισμός χαρακτήρα με την χρήση αριθμού ευρετηρίου/δείκτη.</h3>
+<p id="charAt"></p>
+<h3>indexOf("indexNo"):Εμφάνιση αρ.ευρετηρίου συγκεκριμένης επαναλαμβανόμενης συμβολοσειράς</h3>
+<p id="indexOf"></p>
+<h3>lastIndexOf(indexNo)Εμφάνιση αρ.ευρετηρίου της τελευταίας θέσης μιας επαναλαμβανόμενης συμβολοσειράς</h2>
+<p id="lastIndexOf"></p>
+<h3>startsWith("substring value"):ελέγχος υπάρχουσας υποσυμβολοσειράς(substring) στην αρχή της συμβολοσειράς-true/false</h3>
+<p id="startsWith"></p>
+<h3>endsWith("substring value"):ελέγχος υπάρχουσας υποσυμβολοσειράς(substring) στο τέλος της συμβολοσειράς-true/false</h3>
+<p id="endsWith"></p>
+<h3>search("substringValue"):Αναζήτηση τμήματος συμβολοσειράς με επιστροφή του δείκτη της πρώτης αντιστοίχισης.</h3>
+<p id="search"></p>
+<h3>search("substringValue"):Αναζήτηση τμήματος συμβολοσειράς με επιστροφή του δείκτη της πρώτης αντιστοίχισης με την χρήση μοτίβου.</h3>
+<p id="searchRegEx"></p>
+<h3>match("substring"): Αναζήτηση υποσυμβολοσειράς και επιστροφή ως πίνακας.</h3>
+<p id="match"></p>
+<h3>match("substring"): Αναζήτηση υποσυμβολοσειράς και επιστροφή ως πίνακας με την χρήση μοτίβου.</h3>
+<p id="matchRegEx"></p>
+<h3>repeat(number): επαναλαμβανόμενη εκτώπωση της συμβολοσειράς</h3>
+<p id="repeat"></p>
+ 
+
+    <script>
+       let text1="iek delta 360";
+       let text2="ABC";
+
+       let textCont = text1.length
+       document.getElementById("length").innerHTML = textCont;
+
+       let firstLetter=text1[0];
+       document.getElementById("firstLetter").innerHTML=firstLetter;
+
+       let secondLetter=text1[1];
+       document.getElementById("secondLetter").innerHTML=secondLetter;
+
+       let lastLetter=text1[12];
+       document.getElementById("lastLetter").innerHTML=lastLetter;
+
+       let lastIndex= text1.length-1;
+       document.getElementById("lastIndex").innerHTML=lastIndex;
+
+       document.getElementById("upper").innerHTML=text1.toUpperCase();
+       document.getElementById("lower").innerHTML=text2.toLowerCase();
+
+       let text3=text1.concat(",",text2);
+       document.getElementById("concat").innerHTML=text3;
+
+       document.getElementById("slice").innerHTML=text1.slice(0,5);
+       document.getElementById("substr").innerHTML=text1.substr(0,6);
+       document.getElementById("substring").innerHTML=text1.substring(0,4);
+
+       let tutsTitle="Javascript σειρά μαθημάτων";
+       document.getElementById("splitChar").innerHTML=tutsTitle.split('');
+       document.getElementById("splitWords").innerHTML=tutsTitle.split(' ');
+
+      let countries="Finland, Sweden, Norway, Denmark, and Iceland";
+      document.getElementById("splitIntoArray").innerHTML=countries.split(', ');
+      
+      let tut='        εκμαθηση Javascript     ';
+
+      document.getElementById("trim").innerHTML=tut.trim(' ');
+      document.getElementById("trim2").innerHTML=tut.trim();
+
+      document.getElementById("includes").innerHTML=tut.includes('εκμαθηση');
+      document.getElementById("replace").innerHTML=tut.replace('εκμαθηση','μαθηματα');
+
+      let string="Javascript";
+      document.getElementById("charAt").innerHTML=string.charAt(0);
+
+      let expression="I love Javascript. If you don't love Javascript what else can you love?"
+      document.getElementById("indexOf").innerHTML=expression.indexOf('love');
+      document.getElementById("lastIndexOf").innerHTML=expression.lastIndexOf('love');
+
+      document.getElementById("startsWith").innerHTML=expression.startsWith('I love');
+      document.getElementById("endsWith").innerHTML=expression.endsWith('love?');
+      
+      document.getElementById("search").innerHTML=expression.search('love');
+      document.getElementById("searchRegEx").innerHTML=expression.search(/love/gi);
+
+      document.getElementById("match").innerHTML=expression.match('love');
+      document.getElementById("matchRegEx").innerHTML=expression.match(/love/gi);
+
+      document.getElementById("repeat").innerHTML=expression.repeat(2);
+
+    </script>
+</body>
+</html>

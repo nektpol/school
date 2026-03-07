@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>ορισμός μεταβλητων var</title>
+		<meta name="keywords" content="μεταβλητές var"/>
+		<meta name="author" content="Jane Jansen" />
+		<style>
+			h3 {
+				border:1px solid #A22628;
+				background-color:#A2797A;
+				text-align: center;
+				width:40%;
+				padding:10px;
+				color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="var2"></p>
+		<p id="firstname"></p>
+		<p id="country"></p>
+		<p id="profession"></p>
+		<p id="city"></p>
+		<p id="boilingPoint"></p>
+		<p id="pi"></p>
+		<p id="gravity"></p>
+		<script>
+			//global variable without setting any keyword
+			y=10;
+			//old way of defining a variable
+			var x=5;// var keyword has been used upto 2015
+			//η μεταβλητη x μπορούσε να δηλωθεί ξανά με διαφορετική τιμή
+			var x=8;
+			document.getElementById('var2').innerHTML=x;//μεθοδος προβολής αποτελέσματος στον περιηγητή
+			//from then and on let replaced var
+			let firstName = '  Nicolas  ';    // first name of a person
+			//let firstName = "James"; //ΑΛΛΑ Η ΜΕΤΑΒΛΗΤΗ που ορίζεται με την λέξη κλειδί let δεν μπορεί να ξαναδηλωθεί οπως η x μεταβλητή που ορίστηκε - δηλώθηκε με την λέξη κλειδί var
+			let lastName = 'Jackson'; // last name of a person
+			let age = 52;
+			//μπορούμε να ορισουμε πολλές μεταβλητές σε μια γραμμή και να αναθέσουμε τιμές σε αυτές στις παρακάτω γραμμές όπως
+			let country, profession, city, address; 
+			country="UK";
+			profession="teacher";
+			city = "  Manchester  ";
+			//dom methods -> document object model methods 
+			document.getElementById("firstname").innerText=firstName;
+			document.getElementById("country").innerText=country;
+			document.getElementById("profession").innerText=profession;
+			document.getElementById("city").innerHTML= city;
+			//ορισμός μεταβλητής με την χρήση της λέξης κλειδί const
+			//χρησιμοποιε΄ται για να ορίσει μεταβλητές oi οποίες ορίζουν σταθερή αναφορά σε μια τιμή, δηλαδή τιμές που δεν αλλάζουν.
+			//οταν δηλαδη η μεταβλητή περιγράφει την θερμοκρασία βρασμού του νερού, αύτη ως γνωστόν ειναι οι 100 βαθμοι κελσίου
+			const boilingPoint = 100; // water boiling point, temperature in oC
+			const PI = 3.14; // geometrical constant
+			const gravity = 9.81; //η επιτάχυνση της βαρύτητας είναι μια σταθερά
+			//document.getElementById("boilingPoint").innerHTML="Το σημείο βρασμού του νερού ειναι οι " +" " + boilingPoint +"βαθμοί κελσίου";
+			document.getElementById("boilingPoint").innerText=boilingPoint; 
+			//document => το εγγραφο στο οποίο βρισκόμαστε αποδίδεται στην Javascript με το αντικείμενο document
+			//.getElementById("boilingPoint")=> επιλέγει το στοιχείο της HTML με id boilingPoint και ονομαζεται μέθοδος
+			//innerText => αλλάζει το περιεχόμενο του επιλεγμένου στοιχείου και ονομάζεται ιδιότητα
+			//εναλλακτικά μπορούμε να χρησιμοποιήσουμε την ιδιότητα innerHTML, οπου μπορούμε να αλλάξουμε και το στοιχείο (απο <p></p> σε <div></div>) και το περιεχόμενο του
+			//document.getElementById("pi").innerHTML="Το π έχει τιμή" +" " + PI;
+			document.getElementById("pi").innerHTML= PI; 
+			//document.getElementById("gravity").innerHTML="Η επιτάχυνση της βαρύτητας 'εχει τιμή "+ " " + gravity;
+			document.getElementById("gravity").innerHTML= gravity;
+		</script>
+			
+	</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>εισαγωγή στην Javascript</title>
+		<meta name="keywords" content="εισαγωγή στην Javascript,JavaScript"/>
+		<meta charset="UTF-8">
+		<style>
+			*{
+				box-sizing: border-box;
+				margin:0;
+			}
+			div{
+				margin-top:20px;
+				margin-right:0px;
+				margin-bottom:20px;
+				margin-left:0px;
+				/*margin:20px 0; */
+				/*margin-top:20px;
+				margin-right:12px;
+				margin-bottom:22px;
+				margin-left:10px;*/
+				/*margin:20px 12px 22px 10px  */
+				width:60%;
+			}
+			h1{
+				border:1px solid #333;
+				padding:10px;
+			}
+			/*font-size:35px */
+		</style>
+	</head>
+	<body>
+		<h1>τι μπορεί να κάνει η Javascript</h1>
+		<h2>Αλλαγή μορφοποίησης (στυλ) css ενος στοιχείου html</h2>
+
+		<div style="min-height:240px"> 
+			<p id="demo">Η JavaScript μπορεί να αλλάξει το στυλ ενος html στοιχείου με την χρήση του χαρακτηριστικού style.</p>
+		</div>
+
+		<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Μεγάλωσε</button>
+		<button type="button" onclick="document.getElementById('demo').style.fontSize='16px'">Μίκρυνε</button>
+		
+	</body>
+</html>	

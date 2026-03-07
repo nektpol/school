@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Shrink</title>
+    <style>
+        div.wrapper{
+            display:flex;
+            flex-wrap: nowrap;
+            width: 500px;
+            padding: 6px;
+            background-color: powderblue;
+            margin-bottom: 10px;
+        }
+
+        div.item-1{
+            background-color: rgb(127,219,255);
+        }
+        div.item-2{
+            background-color: palegreen;
+        }
+        div.item-3{
+            background-color: pink;
+        }
+
+        div.item{
+            padding: 10px;
+            width:200px;
+            flex-basis: auto;
+        }
+
+        div.wrapper>div.item:first-child{
+            flex-shrink:5;
+        }
+        div.wrapper>div.item:nth-child(2){
+            flex-shrink:2;
+        }
+        div.wrapper>div.item:nth-child(3){
+            flex-shrink:2;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>1st Case-flex-shrink:1</h1>
+    <div class="wrapper">
+        <div class="item item-1">CSS</div>
+        <div class="item item-2">Is</div>
+        <div class="item item-3">Awesome</div>
+    </div>
+</body>
+</html>

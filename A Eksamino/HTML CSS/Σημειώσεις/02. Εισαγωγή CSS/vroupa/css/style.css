@@ -1,0 +1,10 @@
+/*γενικός κανόνας μορφοποίησης επικεφαλίδας επιπέδου 1-general rule of h1 elements */
+            h1{
+                color:#840a7e;
+                font-size:32px;
+            }
+
+            p{
+                color:#067676;
+                font-size:18px;
+            }

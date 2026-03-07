@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div:after{
+            content: " ";
+            display: block;
+            width: 50px;
+            border:1px solid blueviolet;
+            border-radius: 4px;
+            transition-property: width;
+            transition-duration: 700ms;
+            transition-timing-function: ease-in-out;
+            transition-delay: 200ms;
+        }
+
+        div:hover:after{
+            width: 300px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>just hover me</div>
+</body>
+</html>

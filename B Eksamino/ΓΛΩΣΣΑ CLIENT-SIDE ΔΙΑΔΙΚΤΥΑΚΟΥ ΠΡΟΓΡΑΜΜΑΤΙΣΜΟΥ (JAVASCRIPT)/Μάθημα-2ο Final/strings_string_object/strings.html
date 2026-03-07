@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Προσθήκη συμβολοσειρών JavaScript</title>
+</head>
+
+<body>
+	<h1>Strings</h1>
+    <p>Οι συμβολοσειρές είναι κείμενα που βρίσκονται μεταξύ απλών, διπλών ή αντίστροφων εισαγωγικών(οξείες). Για να δηλώσουμε μια συμβολοσειρά, χρειαζόμαστε ένα όνομα μεταβλητής, έναν τελεστή ανάθεσης και μια τιμή μεταξύ απλών, διπλών ή αντίστροφων εισαγωγικών(οξείες). Ας δούμε μερικά παραδείγματα συμβολοσειρών:</p>
+	
+	<p>Όνομα:</p>
+	<p id="demo"></p>
+	<p>Προσωπικά στοιχεία :</p>
+	<p id="demo1"></p>
+	<h2>concatinating using backticks-συνένωση με την χρήση αντίστροφων εισαγωγικών</h2>
+	<p id="sayingbackticks"></p>
+	<h2>concatinating variables and strings using backticks- συνένωση μεταβλητών και συμβολοσειρών με την χρήση αντίστροφων εισαγωγικών. </h2>
+	<p id="fullnamebackticks"></p>
+	<p id="typeof"></p>
+	<script>
+let space=" ";
+let firstName="Μαρία";
+let lastName="Παπαδοπούλου";
+let age=25;
+let country="Ελλάδα";
+let city = "Αθήνα";
+let language = "Javascript";
+let job ="εκπαιδευτικός";
+let saying='Δάσκαλε που δίδασκες και νόμο δεν εκράτεις';
+//συνένωση συμβολοσειρών-concating strings
+//concating strings using addition operator
+let fullName = firstName + space + lastName; // concatenation, merging two string together
+document.getElementById("demo").innerHTML=fullName;
+
+let personInfo = fullName + '. Είμαι ' + age + 'χρονών. Ζώ στην ' + country;
+document.getElementById("demo1").innerHTML=personInfo;
+
+//concatinating using literal templates- συνένωση με την χρήση κυριολεκτικών προτύπων ή προτύπων συμβολοσειράς
+//πραγματοποιείται με την χρήση αντίστροφων εισαγωγικών ( ` ` ) ή οξειών.
+
+let sayingBackticks=`Δάσκαλε που δίδασκες και νόμο δεν εκράτεις `; 
+document.getElementById("sayingbackticks").innerHTML=sayingBackticks;	
+
+let fullNameBackTicks=`Είμαι η ${fullName}.Είμαι ${age} χρονών. Ζώ στην ${city}.`;
+document.getElementById("fullnamebackticks").innerHTML=fullNameBackTicks;	
+
+//ελεγχος τύπου δεδομένων
+document.getElementById('typeof').innerHTML= typeof firstName ;
+	</script>
+</body>
+</html>

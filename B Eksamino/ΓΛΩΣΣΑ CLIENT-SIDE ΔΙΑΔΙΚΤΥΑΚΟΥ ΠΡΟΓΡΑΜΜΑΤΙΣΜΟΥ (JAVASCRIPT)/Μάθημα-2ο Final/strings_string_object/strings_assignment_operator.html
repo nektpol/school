@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Προσθήκη συμβολοσειρών JavaScript</title>
+</head>
+
+<body>
+	<h1>Προσθήκη συμβολοσειρών JavaScript</h1>
+	<p>Ο τελεστής + χρησιμοποιείται για να προσθέσει συνενώσει) συμβολοσειρές.για αυτό ονομάζεται και τελεστής συνένωσης</p>
+	<p>Όνομα:</p>
+	<p id="demo"></p>
+			
+	<h1>Ο Τελεστής ανάθεσης += </h1>
+	<p>Ο τελεστής ανάθεσης += προσθέτει μια τιμή σε μια μεταβλητή </p>
+	<p id="demo1"></p>
+	<script>
+	var text1="what a very ";
+	text1 += "nice day";
+	var name="Μαρία";
+	var surname="Παπαδοπούλου";
+	var fullName=name + " " + surname;
+document.getElementById("demo").innerHTML=fullName;
+document.getElementById("demo1").innerHTML=text1;
+	</script>
+</body>
+</html>

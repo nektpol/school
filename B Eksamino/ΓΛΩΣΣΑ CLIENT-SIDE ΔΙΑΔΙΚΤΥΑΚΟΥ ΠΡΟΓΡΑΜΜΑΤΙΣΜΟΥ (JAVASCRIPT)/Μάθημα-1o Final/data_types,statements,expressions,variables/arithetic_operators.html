@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Τελεστές Αριθμητικοί</title>
+</head>
+
+<body>
+	<h1>Javascript Operators-Τελεστές Αριθμητικοί</h1>
+	<p>Η Javascript χρησιμοποιεί αριθμητικούς τελεστές για να υπολογίσει τιμές</p> 
+			<ul>
+				<li>"+" πρόσθεση</li>
+				<li> "-" αφαίρεση</li>
+				<li>"* πολλαπλασιασμός</li>
+				<li>"/" Διαίρεση</li>
+				<li>"**" εκθετικός τελεστής</li>
+				<li>"++" αυξητικός τελεστής κατα 1</li>
+				<li>"-- μειωτικός τελεστής κατα 1</li>
+			</ul> 
+	<h2>Πρόσθεση</h2>
+	<p>Ο τελεστής (+) προσθέτει αριθμούς.Παραδειγμα 5+6</p>
+	<p id="addition"></p>
+	<h2>Αφαίρεση</h2>
+	<p>Ο τελεστής (-) αφαιρεί εναν αριθμό απο έναν άλλο.Παραδειγμα 5-6</p>
+	<p id="subtraction"></p>
+	<h2>Πολλαπλασιασμός</h2>
+	<p>Ο τελεστής (*) πολλαπλασιάζει αριθμούς.Παραδειγμα 5*6</p>
+	<p id="multip"></p>
+	<h2>Διαίρεση</h2>
+	<p>Ο τελεστής (/) διαιρεί αριθμούς.Παραδειγμα 5/6</p>
+	<p id="division"></p>
+	<h2>O αυξητικός τελεστής κατα 1</h2>
+	<p>Ο τελεστής (++) αυξάνει αριθμούς κατα 1.Παραδειγμα το 11 γινεται 12</p>
+	<p id="increment"></p>
+	<h2>O μειωτικός τελεστής --</h2>
+	<p>Ο τελεστής (--) μειώνει τους αριθμούς κατα 1.Παραδειγμα το 9 γινεται 8</p>
+	<p id="decrement"></p>
+	<h2>ο εκθετικός τελεστής</h2>
+	<p>για να υπολογίσουμε μια δύναμη, γραφουμε χ<sup>2</sup>. Για να την υπολογίσουμε γράφουμε στην javascript την έκφραση x**2, όπου x=5</p>
+	<p id="exponential"> </p>
+	<h2>Υπολογισμός του (5+6)*10</h2>
+	<p id='demo'></p>
+	<h2>Υπολογισμός του "(5+6)*10" με την χρήση μεταβλητών "(x+y)*z"</h2>
+	<p id='demo1'></p>
+	<h2>Javascript Expressions-Εκφράσεις</h2>
+	<p>Μια έκφραση είναι ένας συνδιασμός τιμών, μεταβλητών και τελεστών, τα οποία υπολογίζουν μια τιμή.Ο υπολογισμός(computation) ονομάζεται εκτίμηση(Evaluation)</p>
+	<p>Παράδειγμα έκφρασης με την χρήση μεταβλητών τιμών:x**2..δύναμη του x στο τετράγωνο</p>
+	<p id="demo2"></p>
+	<h2>Τελεστές ανάθεσης</h2>
+	<p>οι τελεστές ανάθεσης αναθέτουν τιμές στις μεταβλητές javascript ,x=5, x+=5, x-=5,</p>
+	<p id="demo3"></p>
+	<h2>Χρήση αριθμητικών τελεστών για την συνένωση συμβολοσειρών strings</h2>
+	<p id="letvariable"></p>
+	<script>
+		document.getElementById("demo").innerHTML=(5+6)*10;//αριθμητική εκφραση
+		let x,y,z,Y,e,f,g,h,i; //δηλωση μεταβλητών σε μια γραμμή
+		x=5;
+		y=6;
+		z=10;
+		Y=(x+y)*z; //εκφραση: ορίζεται ως ο συνδιασμός αριθμητικών μεταβλητων με την χρήση αριθμητικών τελεστών για τον υπολογισμό μιας τιμής
+		e=50;
+		e=e + 5; //e += 5
+		h=11;
+		h++;
+
+		i=9;
+		i--;
+
+		document.getElementById("addition").innerHTML=x+y;
+		document.getElementById("subtraction").innerHTML= x-y;
+		document.getElementById("multip").innerHTML=x*y;
+		document.getElementById("division").innerHTML=x/y;
+		document.getElementById("increment").innerHTML=h;
+		document.getElementById("decrement").innerHTML=i;
+		document.getElementById("exponential").innerHTML=x**2;
+		document.getElementById("demo1").innerHTML=Y;
+		document.getElementById("demo3").innerHTML=e;
+
+		let firstName = 'Nicolas';    // first name of a person
+		//	let firstName = "James"; ΑΛΛΑ Η ΜΕΤΑΒΛΗΤΗ που ορίζεται με την λέξη κλειδί let δεν μπορεί να ξαναδηλωθεί οπως η x μεταβλητή που ορίστηκε - δηλώθηκε με την λέξη κλειδί var
+		let lastName = 'Jackson'; // last name of a person
+		let age = 52;
+		//χρησιμοποιούμε τον τελεστή + για να ενώσουμε εκφράσεις συμβολοσειρών (strings)-προσθεση συμβολοσειρών (adding strings using + operator)
+		document.getElementById("letvariable").innerText="Το όνομα του είναι" +" "+ firstName + " " +"και το επώνυμο του είναι " + " " + lastName +" "+ "και είναι"+" "+ age +" "+ "χρονών";
+	</script>
+</body>
+</html>
