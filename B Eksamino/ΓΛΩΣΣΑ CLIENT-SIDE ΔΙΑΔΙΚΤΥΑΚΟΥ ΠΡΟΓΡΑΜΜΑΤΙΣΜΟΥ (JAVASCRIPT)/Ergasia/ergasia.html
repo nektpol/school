@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ekfonisi{
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <h1>Εργασία Εξαμήνου </h1>
+    <p>Χρήση JavaScript για επεξεργασία συμβολοσειρών</p>
+    <p class="ekfonisi">
+        1. Δηλώστε μια μεταβλητή με όνομα challenge με τιμή '30 Days Of JavaScript' .
+    </p>
+    <p class="ekfonisi">    
+        2. Εκτυπώστε τη συμβολοσειρά στον περιηγήτη  χρησιμοποιώντας την  μέθοδο document.getElementById()  
+    </p>
+    <p id="demo"></p> 
+    <p class="ekfonisi">    
+        3. Εκτυπώστε το μήκος της συμβολοσειράς στον περιηγήτη χρησιμοποιώντας την  μέθοδο document.getElementById()  
+    </p>
+    <p id="demo3"></p> 
+    <p class="ekfonisi">
+        4. Αλλάξτε όλους τους χαρακτήρες συμβολοσειράς σε κεφαλαία γράμματα χρησιμοποιώντας τη μέθοδο toUpperCase() 
+    </p>
+    <p id="demo4"></p> 
+    <p class="ekfonisi"> 
+        5. Αλλάξτε όλους τους χαρακτήρες συμβολοσειράς σε πεζά γράμματα χρησιμοποιώντας τη μέθοδο toLowerCase() 
+    </p> 
+    <p id="demo5"></p> 
+    <p class="ekfonisi">    
+        6. Κόψτε (τεμαχίστε) την πρώτη λέξη της συμβολοσειράς χρησιμοποιώντας τη μέθοδο substr() ή substring()
+    </p> 
+    <p id="demo6"></p>
+    <p class="ekfonisi"> 
+        7. Κόψτε τη φράση Days Of JavaScript από το 30 Days Of JavaScript . 
+    </p> 
+    <p id="demo7"></p>
+    <p class="ekfonisi">
+        8. Έλεγξτε αν η συμβολοσειρά περιέχει μια λέξη Script χρησιμοποιώντας τη μέθοδο includes(). 
+    </p> 
+    <p id="demo8"></p>
+    <p class="ekfonisi">
+        9. Διαχωρίστε τη συμβολοσειρά σε έναν πίνακα χρησιμοποιώντας τη μέθοδο split(). 
+    </p> 
+    <p id="demo9"></p>
+    <p class="ekfonisi">
+        10. Αλλάξτε την τιμή 30 Days Of JavaScript σε 30 Days Of Python χρησιμοποιώντας τη μέθοδο replace() . 
+    </p>
+    <p id="demo10"></p>
+
+    <script>
+        let challenge = '30 Days Of JavaScript';
+        document.getElementById('demo').innerHTML = challenge;
+        document.getElementById('demo3').innerHTML = challenge.length;
+        document.getElementById('demo4').innerHTML = challenge.toUpperCase();
+        document.getElementById('demo5').innerHTML = challenge.toLowerCase();
+        document.getElementById('demo6').innerHTML = challenge.substr(0, 2);
+        document.getElementById('demo7').innerHTML = challenge.substr(3, 4);
+        document.getElementById('demo8').innerHTML = challenge.includes('Script');
+        document.getElementById('demo9').innerHTML = challenge.split();
+        document.getElementById('demo10').innerHTML = challenge.replace('JavaScript', 'Python');
+    </script>
+</body>
+</html>
