@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Τελεστές Αριθμητικοί</title>
+<style>
+	*{
+			box-sizing: border-box;
+			margin:0;
+		}
+		div{
+			width:320px;
+			box-shadow:0 0 4px 1px #5e5e5e7e;
+			text-align:center;
+			margin:0 auto; /*τοποθέτηση στοιχείου στο κέντρο */
+		}
+		div>h1{
+			background-color: #333;
+			color:aliceblue;
+			padding:10px;
+		}
+		div>h2{
+			font-size:18px;
+			padding:4px;
+
+		}
+		div>h2,div>p{
+			margin:6px;
+		}
+
+</style>
+</head>
+
+<body>
+	<h1>Javascript Operators-Τελεστές Αριθμητικοί</h1>
+	<p>Η Javascript χρησιμοποιεί αριθμητικούς τελεστές για να υπολογίσει τιμές</p> 
+			<ul>
+				<li>"+" πρόσθεση</li>
+				<li> "-" αφαίρεση</li>
+				<li>"* πολλαπλασιασμός</li>
+				<li>"/" Διαίρεση</li>
+				<li>"**" εκθετικός τελεστής</li>
+				<li>"++" αυξητικός τελεστής κατα 1</li>
+				<li>"-- μειωτικός τελεστής κατα 1</li>
+			</ul> 
+	<div> 
+	<h2>Πρόσθεση</h2>
+	<p>Ο τελεστής (+) προσθέτει αριθμούς.Παραδειγμα 5+6</p>
+	<p id="addition"></p>
+	</div>
+	<div> 
+	<h2>Αφαίρεση</h2>
+	<p>Ο τελεστής (-) αφαιρεί εναν αριθμό απο έναν άλλο.Παραδειγμα 5-6</p>
+	<p id="subtraction"></p>
+</div>
+<div> 
+	<h2>Πολλαπλασιασμός</h2>
+	<p>Ο τελεστής (*) πολλαπλασιάζει αριθμούς.Παραδειγμα 5*6</p>
+	<p id="multip"></p>
+</div>
+<div> 
+	<h2>Διαίρεση</h2>
+	<p>Ο τελεστής (/) διαιρεί αριθμούς.Παραδειγμα 5/6</p>
+	<p id="division"></p>
+</div>
+<div> 
+	<h2>O αυξητικός τελεστής κατα 1</h2>
+	<p>Ο τελεστής (++) αυξάνει αριθμούς κατα 1.Παραδειγμα το 11 γινεται 12</p>
+	<p id="increment"></p>
+</div>
+<div>
+	<h2>O μειωτικός τελεστής --</h2>
+	<p>Ο τελεστής (--) μειώνει τους αριθμούς κατα 1.Παραδειγμα το 9 γινεται 8</p>
+	<p id="decrement"></p>
+</div>
+<div> 
+	<h2>ο εκθετικός τελεστής</h2>
+	<p>για να υπολογίσουμε μια δύναμη, γραφουμε χ<sup>2</sup>. Για να την υπολογίσουμε γράφουμε στην javascript την έκφραση x**2, όπου x=5</p>
+	<p id="exponential"> </p>
+</div>
+	<p id="demo3"></p>
+	<script>
+	document.getElementById("demo").innerHTML=(5+6)*10;
+	var x,y,z,Y,e,f,g,h,i;
+	x=5;
+	y=6;
+document.getElementById("addition").innerHTML=x+y;
+document.getElementById("subtraction").innerHTML= x-y;
+document.getElementById("multip").innerHTML=x*y;
+document.getElementById("division").innerHTML=x/y;
+//τελεστής αύξησης
+	h=11;
+	h++;
+document.getElementById("increment").innerHTML=h;
+//τελεστής μείωσης	
+	i=9;
+	i--;
+document.getElementById("decrement").innerHTML=i;
+		
+document.getElementById("exponential").innerHTML=x**2;
+		
+		
+e=50;
+e=e + 5;
+document.getElementsById("demo3").innerHTML=e;
+	</script>
+</body>
+</html>

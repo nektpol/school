@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Προσθήκη συμβολοσειρών JavaScript</title>
+</head>
+
+<body>
+	<h1>String Numbers to numbers</h1>
+    <p>Μπορούμε να μετατρέψουμε έναν αριθμό συμβολοσειράς σε αριθμό. Οποιοσδήποτε αριθμός μέσα σε εισαγωγικά είναι ένας αριθμός συμβολοσειράς. Ένα παράδειγμα αριθμού συμβολοσειράς: '10', '5', κ.λπ. Χρησιμοποιούμε τις ακόλουθες μεθόδους για την μετατροπή συμβολοσειράς σε αριθμό:</p>
+    <h2>Μετατροπή ακέραιου αριθμού συμβολοσειράς σε ακέραιο</h2>
+    <ol>
+        <li>parseInt()</li>
+        <li>Number()</li>
+        <li>Σύμβολο πρόσθεσης (+)</li>
+    </ol>
+	<h2>parseInt()</h2>
+    <p id="parseint"></p>
+
+    <h2>Number</h2>
+    <p id="number"></p>
+	
+    <h2>Σύμβολο πρόσθεσης (+) </h2>
+    <p id="plussymbol"></p>
+
+    <h2>Μετατροπή string δεκαδικού αριθμού σε δεκαδικό</h2>
+    <ol>
+        <li>parseFloat()</li>
+        <li>Number()</li>
+        <li>Σύμβολο πρόσθεσης (+)</li>
+    </ol>
+        <p id="parsefloat"></p>
+    <h2>Μετατροπή δεκαδικού αριθμού σε ακέραιο</h2>
+    <p>Μπορούμε να μετατρέψουμε αριθμούς float σε ακέραιους. Χρησιμοποιούμε την ακόλουθη μέθοδο για να μετατρέψουμε float σε int: parseInt() </p>
+    <p id="floattoint"></p>
+	<script>
+        let num="10";
+        let numInt=parseInt(num);
+        document.getElementById("parseint").innerHTML=numInt + " " +typeof numInt;
+
+        let numNumber=Number(num);
+        document.getElementById('number').innerHTML= numNumber;
+
+        let plusSymbol = +num;
+        document.getElementById('plussymbol').innerHTML= plusSymbol;
+
+        let decimalNumString ="11.6";
+        let decimalNum=parseFloat(decimalNumString);
+        document.getElementById('parsefloat').innerHTML= decimalNum + " " +typeof decimalNum ;
+        //μεταροπη δεκαδικού σε ακέραιο
+        let decimal = 12.6;
+        let decimalToInt = parseInt(decimal);
+        document.querySelector('#floattoint').innerHTML= decimalToInt;
+//https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/02_Day_Data_types/02_day_data_types.md#data-types
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Math Object</h1>
+<h2>Math Object Properties</h2>
+<p id="cbrt"></p>
+<p id="expx"></p>
+<p id="min"></p>
+<p id="max"></p>
+<p id="sqrt"></p>
+<p id="pi"></p>
+<p id="power"></p>
+<p id="round"></p>
+<p id="roundUp"></p>
+	<script>
+		//υπολογισμός κυβικής ρίζας
+		let cbrt=Math.cbrt(125);
+		document.getElementById("cbrt").innerHTML =cbrt;
+	//υπολογισμός δύναμης με βάση τον νεπέριο αριθμο e και εκθέτη την μεταβλητη x.
+		let exp=Math.exp(2);
+		document.getElementById("expx").innerHTML =exp;
+	//εντοπισμός ελάχιστης τιμής	
+		let min=Math.min(12,33,25);
+		document.getElementById("min").innerHTML =min;
+	//εντοπισμός μέγιστης τιμής
+		let max=Math.max(12,33,25);
+		document.getElementById("max").innerHTML =max;
+	//υπολογισμός τετραγωνικής ρίζας
+		let sqrt=Math.sqrt(169);
+		document.getElementById("sqrt").innerHTML =sqrt;
+	//υπολογισμός του αριθμού π
+		let pi=Math.PI;
+		document.getElementById("pi").innerHTML = pi;
+	//υπολογισμός δύναμης 2 φυσικών αριθμων με βάση x και εκθέτη y.
+	let powerx=Math.pow(3,2);
+	document.getElementById("power").innerHTML = powerx;
+		//Math.floor() στρογγυλοποιεί κάθε δεκαδικό αριθμο με φθίνουσα ταξινόμηση
+	let roundDown=Math.floor(3.9);
+	document.getElementById("round").innerHTML = roundDown;
+	// Math.ceil() στρογγυλοποιεί προς τα πάνω, με αύξουσα ταξινόμηση 
+	let roundUp=Math.ceil(3.9);
+	document.getElementById("roundUp").innerHTML= roundUp;
+	</script>
+</body>
+</html>

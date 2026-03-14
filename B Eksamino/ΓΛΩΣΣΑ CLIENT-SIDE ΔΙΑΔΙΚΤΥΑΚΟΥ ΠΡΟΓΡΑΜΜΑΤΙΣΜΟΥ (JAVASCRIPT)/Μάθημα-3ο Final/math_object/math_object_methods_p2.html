@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Math Object</h1>
+<h2>Math Object Properties</h2>
+<h3>Math.E , υπολογισμός του νεπέριου αριθμού e</h3>
+<p id="neperiumNo"></p>
+<h3>Math.log(), υπολογισμός λογαρίθμων</h3>
+<p id="logarithm"></p>
+<h3>Math.random() εμφάνιση τυχαίων αριθμούς απο 0 έως 1</h3>
+<p id="random0To1"></p>
+<h3>Math.random() εμφάνιση τυχαίων αριθμούς απο 0 έως 3</h3>
+<p id="random"></p>
+<h3>Εμφάνιση τυχαίου στρογγυλοποιημένου αριθμού απο το 0 εως το 3 </h3>
+<p id="roundNo"></p>
+<h3>Math.sin() - Υπολογισμός ημιτόνου</h3>
+<p id="sinnus"></p>
+<h3>Math.cos() - Υπολογισμός συνημιτόνου</h3>
+<p id="cosine"></p>
+<h3>Math.tan() - Υπολογισμός εφαπτομένης</h3>
+<p id="tangent"></p>
+	<script>
+	// Math.E , υπολογισμός του νεπέριου αριθμού e
+	let neperiumE=Math.E;
+	document.getElementById("neperiumNo").innerHTML=neperiumE;
+	//Math.log(), υπολογισμός λογαρίθμων
+	let logarithm=Math.log(2);
+	document.getElementById("logarithm").innerHTML=logarithm;
+	//Math.random() εμφανίζει τυχαίους αριθμούς απο 0 έως 1	
+	let randomNumber0To1= Math.random();
+	//εμφανιση τυχαίου αριθμού στον περιηγητή
+	document.getElementById("random0To1").innerHTML=randomNumber0To1;
+	// εμφανιση τυχαίων αριθμών απο 0 έως 3 πολλαπλασιάζοντας την μεθοδο math.random() με το 4
+	let randomNo=4*Math.random();
+	document.getElementById("random").innerHTML = randomNo;
+
+	//Math.floor() στρογγυλοποιεί τον κάθε δεκαδικό ως προς το προηγούμενο μικρότερο αριθμό
+	let roundNo=Math.floor(randomNo);//δημιουργεί τυχαίους ακέραιους αριθμούς συνδυαστικά με την χρήση των μεθόδων Math.floor() και Math.random() απο το 0 εως το 3
+	document.getElementById("roundNo").innerHTML = roundNo;
+
+	//τριγωνομετρικοί αριθμοί...οι τιμές τους πρέπει να είναι σε ακτίνια και οχι σε μοίρες. Τυπος μετατροπής ακτινια= μοιρες(π/180), όπου π = 3,14.
+	let sinnus=Math.sin(Math.PI/3); //ρίζα 3/2 ειναι το αποτελεσμα του ημιτονου με γωνία π/3 που αντιστοιχεί στην γωνία 60 μοιρών
+	document.getElementById("sinnus").innerHTML= sinnus;
+
+	let cosine = Math.cos(Math.PI/3);// η τιμή 1/2 ειναι το αποτέλεσμα του συνημιτόνου με γωνία π/3 
+	document.getElementById("cosine").innerHTML= cosine;
+
+	let tangent = Math.tan(Math.PI/3); // η τιμή ριζα 3 αντιστοιχεί στην εφαπτομένη με γνωία π/3
+	document.getElementById("tangent").innerHTML= tangent;
+	</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Τελεστές Ανάθεσης</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin:0;
+		}
+		div{
+			width:320px;
+			box-shadow:0 0 4px 1px #5e5e5e7e;
+			text-align:center;
+			margin:0 auto; /*τοποθέτηση στοιχείου στο κέντρο */
+		}
+		div>h1{
+			background-color: #333;
+			color:aliceblue;
+			padding:10px;
+		}
+		div>h2{
+			font-size:18px;
+			padding:4px;
+
+		}
+		div>h2,div>p{
+			margin:6px;
+		}
+	</style>
+</head>
+	
+<body>
+	<div>  
+		<h1>Τελεστές ανάθεσης</h1>
+		<h2>τελεστής ανάθεσης πρόσθεσης- addition assignment operator</h2>
+		<p id="addition"></p>
+
+		<h2>τελεστής ανάθεσης αφαίρεσης</h2>
+		<p id="subtraction"></p>
+
+		<h2>τελεστης ανάθεσης πολ/σμου m *= 2</h2>
+		<p id="multiplication"></p>
+		
+		<h2>τελεστης ανάθεσης διαίρεσης d /= 2</h2>
+		<p id="division"></p>
+		
+		<h2>τελεστης ανάθεσης εκθέτη e **= 2 </h2>
+		<p id="exponential"></p>
+
+		<h2>τελεστης ανάθεσης υπολοίπου x %= 3</h2>
+		<p id="mod"></p>
+	</div>
+	<script>
+		let a,s,d,m, e, mod;
+		a = 50;
+		a += 5; //a= a + 5
+		s = 66; 
+		s -= 10; //s = s-10
+		document.getElementById("addition").innerHTML=a;
+		document.getElementById("subtraction").innerHTML=s;
+		//τελεστής ανάθεσης πολλαπλασιασμού και διαίρεσης
+		m=45;//οριστικοποίηση μεταβλητής
+		m *= 2;//m=m*2, τελεστής ανάθεσης πολ/σμου
+		document.getElementById("multiplication").innerHTML=m;
+		
+		d=3555;//variable initialization
+		d /= 2; //d= d/2 => τελεστής ανάθεσης διαίρεσης 
+		document.getElementById("division").innerHTML=d;
+		e=3; //variable initialization
+		e **= 2;// e = e**2 εκθέτικός τελεστής ανάθεσης
+		document.getElementById("exponential").innerHTML=e;
+		
+		mod=27;
+		mod %= 3; //mod = mod % 3
+		document.getElementById("mod").innerHTML=mod;
+		
+	</script>
+</body>
+</html>

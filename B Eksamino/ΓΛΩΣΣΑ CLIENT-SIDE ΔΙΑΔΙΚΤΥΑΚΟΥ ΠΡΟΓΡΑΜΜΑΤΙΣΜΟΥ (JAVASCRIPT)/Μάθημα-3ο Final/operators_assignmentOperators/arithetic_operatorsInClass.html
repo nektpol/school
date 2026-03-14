@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Τελεστές Αριθμητικοί</title>
+<style>
+	*{
+			box-sizing: border-box;
+			margin:0;
+		}
+		div{
+			width:320px;
+			box-shadow:0 0 4px 1px #5e5e5e7e;
+			text-align:center;
+			margin:10px auto; /*τοποθέτηση στοιχείου στο κέντρο */
+		}
+		div>h2{
+			background-color: #333;
+			color:aliceblue;
+			font-size:20px;
+			padding:6px;
+		}
+		div>p{
+			padding:8px;
+		}
+		div>h2,div>p{
+			margin-bottom:6px;
+		}
+
+</style>
+</style>
+</head>
+
+<body>
+	<div> 
+		<h2>Πρόσθεση</h2>
+		<p>Ο τελεστής (+) προσθέτει αριθμούς.Παραδειγμα 5+6</p>
+		<p id="addition"></p>
+		</div>
+		<div> 
+		<h2>Αφαίρεση</h2>
+		<p>Ο τελεστής (-) αφαιρεί εναν αριθμό απο έναν άλλο.Παραδειγμα 5-6</p>
+		<p id="subtraction"></p>
+	</div>
+	<div> 
+		<h2>Πολλαπλασιασμός</h2>
+		<p>Ο τελεστής (*) πολλαπλασιάζει αριθμούς.Παραδειγμα 5*6</p>
+		<p id="multip"></p>
+	</div>
+	<div> 
+		<h2>Διαίρεση</h2>
+		<p>Ο τελεστής (/) διαιρεί αριθμούς.Παραδειγμα 5/6</p>
+		<p id="division"></p>
+	</div>
+	<div> 
+		<h2>O αυξητικός τελεστής κατα 1</h2>
+		<p>Ο τελεστής (++) αυξάνει αριθμούς κατα 1.Παραδειγμα το 11 γινεται 12</p>
+		<p id="increment"></p>
+	</div>
+	<div>
+		<h2>O μειωτικός τελεστής --</h2>
+		<p>Ο τελεστής (--) μειώνει τους αριθμούς κατα 1.Παραδειγμα το 9 γινεται 8</p>
+		<p id="decrement"></p>
+	</div>
+	<div> 
+		<h2>ο εκθετικός τελεστής</h2>
+		
+		<p id="exponential"> </p>
+	</div>
+	<div> 
+		<h2>Προσθεση αριθμού με μεταβλητή</h2>
+		<p id="addVariable"></p>
+	</div>
+	
+
+	<script>
+
+	let x,y,z,Y,e,f,g,h,i;
+	x=5;
+	y=6;
+		document.getElementById("addition").innerHTML=x+y;
+		document.getElementById("subtraction").innerHTML= x-y;
+		document.getElementById("multip").innerHTML=x*y;
+		document.getElementById("division").innerHTML=x/y;
+//τελεστής αύξησης
+	h=11;
+	h++;
+document.getElementById("increment").innerHTML=h;
+//τελεστής μείωσης	
+	i=9;
+	i--;
+document.getElementById("decrement").innerHTML=i;
+		
+document.getElementById("exponential").innerHTML=x**2;
+		
+e=50;
+e=e + 5;
+document.getElementById("addVariable").innerHTML=e;
+	</script>
+</body>
+</html>
