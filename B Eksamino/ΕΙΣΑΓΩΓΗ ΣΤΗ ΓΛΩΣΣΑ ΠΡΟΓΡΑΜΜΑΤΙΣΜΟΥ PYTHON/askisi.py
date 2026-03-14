@@ -31,6 +31,48 @@ def toCapital(my_word):
                 capitalWord+="D"
             case "e":
                 capitalWord+="E"
+            case "f":
+                capitalWord+="F"
+            case "g":
+                capitalWord+="G"
+            case "h":
+                capitalWord+="H"
+            case "i":
+                capitalWord+="I"
+            case "j":
+                capitalWord+="J"
+            case "k":
+                capitalWord+="K"
+            case "l":
+                capitalWord+="L"
+            case "m":
+                capitalWord+="M"
+            case "n":
+                capitalWord+="N"
+            case "o":
+                capitalWord+="O"
+            case "p":
+                capitalWord+="P"
+            case "q":
+                capitalWord+="Q"
+            case "r":
+                capitalWord+="R"
+            case "s":
+                capitalWord+="S"
+            case "t":
+                capitalWord+="T"
+            case "u":
+                capitalWord+="U"
+            case "v":
+                capitalWord+="V"
+            case "w":
+                capitalWord+="W"
+            case "x":
+                capitalWord+="X"
+            case "y":
+                capitalWord+="Y"
+            case "z":
+                capitalWord+="Z"
             case _:
                 capitalWord+="_"
     return capitalWord
