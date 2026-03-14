@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operators in JavaScript</h1>
+    <h2>Addition a=50, a+=50</h2>
+    <p id="addition"></p>
+
+    <h2>Subtraction s=66, s-=10</h2>
+    <p id="subtraction"></p>
+
+    <h2>Multiplication m=45, m*=2</h2>
+    <p id="multiplication"></p>
+
+    <h2>Division d=3555, d/=5</h2>
+    <p id="division"></p>
+
+    <h2>Exponential e=3, e**=2</h2>
+    <p id="exponential"></p>
+
+    <h2>Modulus mod=27, mod%=3</h2>
+    <p id="modulus"></p>
+
+    <script>
+        let a,s,d,m,e,mod;
+        a=50;
+        a+= 5;
+        s = 66;
+        s-= 10;
+        document.getElementById('addition').innerHTML = a;
+        document.getElementById('subtraction').innerHTML = s;
+
+        m=45;
+        m*= 2;
+        document.getElementById('multiplication').innerHTML = m;
+
+        d=3555;
+        d/= 5;
+        document.getElementById('division').innerHTML = d;
+
+        e=3;
+        e **= 2;
+        document.getElementById('exponential').innerHTML = e;
+
+        mod=27
+        mod %= 3;
+        document.getElementById('modulus').innerHTML = mod;
+    </script>
+</body>
+</html>

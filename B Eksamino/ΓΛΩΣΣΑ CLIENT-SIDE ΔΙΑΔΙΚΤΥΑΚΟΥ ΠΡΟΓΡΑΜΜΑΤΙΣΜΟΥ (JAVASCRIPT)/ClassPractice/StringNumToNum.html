@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String to Number Conversion</title>
+</head>
+<body>
+    <h2>parseInt()</h2>
+    <p id="parseint"></p>
+
+    <h2>Number</h2>
+    <p id="number"></p>
+
+    <h2>Συμβολο προσθεσης (+)</h2>
+    <p id="plussymbol"></p>
+
+    <h2> ΜΕτατροπή string  δεκαδικού αριθμού σε αριθμό</h2>
+    <p id="parsefloat"></p>
+
+    <h2>Μετατροπή δεκαδικού αριθμού σε ακέραιο</h2>
+    <p id="floattoint"></p>
+
+    <script>
+        let num = '10';
+        let numInt = parseInt(num);
+        document.getElementById('parseint').innerHTML =numInt + " " + typeof numInt;
+
+        let numNumber = Number(num);
+        document.getElementById('number').innerHTML =numNumber;
+
+        let plusSymbol = +num;
+        document.getElementById('plussymbol').innerHTML = plusSymbol;
+
+        let decimalNumString= '11.6';
+        let decimalNum = parseFloat(decimalNumString);
+        document.getElementById('parsefloat').innerHTML = decimalNum + " " + typeof decimalNum;
+        
+        let decimal = 12.6;
+        let decimalToInt = parseInt(decimal);
+        document.querySelector('#floattoint').innerHTML = decimalToInt;
+    </script>
+</body>
+</html>

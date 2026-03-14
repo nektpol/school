@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Εργασία Εξαμήνου - Επεξεργασία Συμβολοσειρών με JavaScript</title>
     <style>
         .ekfonisi{
             font-weight: bold;
@@ -37,6 +37,7 @@
         6. Κόψτε (τεμαχίστε) την πρώτη λέξη της συμβολοσειράς χρησιμοποιώντας τη μέθοδο substr() ή substring()
     </p> 
     <p id="demo6"></p>
+    <p id="demo6b"></p>
     <p class="ekfonisi"> 
         7. Κόψτε τη φράση Days Of JavaScript από το 30 Days Of JavaScript . 
     </p> 
@@ -61,7 +62,8 @@
         document.getElementById('demo4').innerHTML = challenge.toUpperCase();
         document.getElementById('demo5').innerHTML = challenge.toLowerCase();
         document.getElementById('demo6').innerHTML = challenge.substr(0, 2);
-        document.getElementById('demo7').innerHTML = challenge.substr(3, 4);
+        document.getElementById('demo6b').innerHTML = challenge.substring(0, 2);
+        document.getElementById('demo7').innerHTML = challenge.slice(3);
         document.getElementById('demo8').innerHTML = challenge.includes('Script');
         document.getElementById('demo9').innerHTML = challenge.split();
         document.getElementById('demo10').innerHTML = challenge.replace('JavaScript', 'Python');

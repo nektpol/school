@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt to Number Conversion</title>
+</head>
+<body>
+    <div>
+        <h1> Είδη output-prompt() method</h1>
+        <p>Οι μέθοδοι προτροπης παραθύρου εμφανίζουν ένα παράθυρο προτροπής με μια είσοδο στον browser  σας για να λάβετε τιμές</p>
+        <p id="demo"></p>
+    </div>
+    <script>
+        let age = prompt('Enter your age', 'your age goes here');
+        let ageNumber = Number(age);
+        document.getElementById('demo').innerHTML = `Είσαι ${age} χρονών και ο τύπος της μεταβλητής age είναι ${typeof age} <br> `;
+    </script>
+</body>
+</html>
