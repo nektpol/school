@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>If Statement Example</h1>
+    <p>Use an if statement to execute code based on a condition.</p>
+
+    <p>if (statement) {<br>
+        // code to be executed if the condition is true<br>
+    }</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p class="demo3"></p>
+
+    <p id="demo4"></p>
+
+    <script>
+        let age=25;
+        if(age>18){
+            document.getElementById('demo').innerHTML='You are an adult.';
+        }
+
+        let num=3;
+        if(num>0){
+            // querySelector() επιστρέφει το πρώτο στοιχείο που ταιριάζει με τον καθορισμένο επιλεγέα CSS.
+            document.querySelector('#demo2').innerHTML='The number is positive.';
+        }
+
+        let el3=document.querySelector('.demo3');
+        let isRaining=true;
+        if(isRaining){
+            document.querySelector('.demo3').innerHTML='Remember to take an umbrella.';
+            el3.style.color='blue';
+            el3.style.fontSize='20px';
+            el3.style.fontWeight='bold';
+            el3.style.backgroundColor='lightblue';
+        }
+        else{
+            document.querySelector('.demo3').innerHTML='Enjoy the sunshine!';
+            el3.style.cssText='color:orange; font-size:30px; font-weight:bold;';
+        }
+
+        let weather='sunny';
+        let notification;
+        let style;
+        let el=document.getElementById('demo4');
+        if(weather==='rainy'){
+            notification='Remember to take an umbrella.';
+            style = 'color:blue; font-size:20px; font-weight:bold;';
+        }
+        else if(weather==='sunny'){
+            notification='Enjoy the sunshine!';
+            style = 'color:orange; font-size:30px; font-weight:bold;';
+        }
+        else{
+            notification='Have a nice day!';
+            style = 'color:green; font-size:15px; font-weight:bold;';
+        }
+        el.innerHTML = notification;
+        el.style = style;
+    </script>
+</body>
+</html>

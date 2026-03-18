@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="randomNumber"></p>
+
+    <p id="random"></p>
+    <p id="randomIntNum"></p>
+    <p id="random0to10"></p>
+    <p id="stringChar"></p>
+
+    <p id="randomIntInRange"></p>
+
+    <script>
+        let randomNum = Math.random();
+        document.getElementById('randomNumber').innerHTML = randomNum;
+
+        let num0To10 = randomNum * 10;
+        document.getElementById('random').innerHTML = num0To10;
+
+        let roundNum0To9 = Math.round(num0To10);
+        document.getElementById('randomIntNum').innerHTML = roundNum0To9;
+
+        let min = 10;
+        let max = 20;
+        let randomIntInRange = Math.random() * (max - min) + min;
+        // Math.round() θα στρογγυλοποιήσει τον αριθμό στο πλησιέστερο ακέραιο, οπότε μπορεί να επιστρέψει είτε το min είτε το max. 
+        // Math.floor() θα στρογγυλοποιήσει τον αριθμό προς τα κάτω, οπότε μπορεί να επιστρέψει το min αλλά όχι το max.
+        // Math.ceil() θα στρογγυλοποιήσει τον αριθμό προς τα πάνω, οπότε μπορεί να επιστρέψει το max αλλά όχι το min.
+        document.getElementById("randomIntInRange").innerHTML = `Random integer between ${min} and ${max}: ${Math.round(randomIntInRange)}`;    
+    </script>
+</body>
+</html>
