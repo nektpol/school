@@ -1,9 +1,11 @@
 ﻿#include "TeamMember.h"
 #include <iostream>
+using std::string;
+using std::cout;
 
-TeamMember::TeamMember(int mo, std::string name, std::string nickname,
+TeamMember::TeamMember(int mo, string name, string nickname,
 	int maxScore, int maxFouls,
-	std::string coach, std::string specialty,
+	string coach, string specialty,
 	int p1, int p2, int p3, int p4, int p5)
 {
 	this->mo = mo;
@@ -23,17 +25,17 @@ TeamMember::TeamMember(int mo, std::string name, std::string nickname,
 
 int TeamMember::getMO() { return mo; }
 
-std::string TeamMember::getName() { return name; }
+string TeamMember::getName() { return name; }
 
-std::string TeamMember::getNickname() { return nickname; }
+string TeamMember::getNickname() { return nickname; }
 
 int TeamMember::getMaxScore() { return maxScore; }
 
 int TeamMember::getMaxFouls() { return maxFouls; }
 
-std::string TeamMember::getCoach() { return coach; }
+string TeamMember::getCoach() { return coach; }
 
-std::string TeamMember::getSpecialty() { return specialty; }
+string TeamMember::getSpecialty() { return specialty; }
 
 void TeamMember::setName(std::string name)
 {
@@ -67,14 +69,14 @@ void TeamMember::setSpecialty(std::string specialty)
 
 void TeamMember::print() const
 {
-	std::cout << "==============================\n";
-	std::cout << "Team MO: " << mo << '\n';
-	std::cout << "Team Name: " << name << " (" << nickname << ")" << '\n';
-	std::cout << "Coach: " << coach << '\n';
-	std::cout << "Specialty: " << specialty << '\n';
-	std::cout << "Max Score: " << maxScore << '\n';
-	std::cout << "Max Fouls: " << maxFouls << '\n';
-	std::cout << "Players (AM): "
+	cout << "==============================\n";
+	cout << "Team MO: " << mo << '\n';
+	cout << "Team Name: " << name << " (" << nickname << ")" << '\n';
+	cout << "Coach: " << coach << '\n';
+	cout << "Specialty: " << specialty << '\n';
+	cout << "Max Score: " << maxScore << '\n';
+	cout << "Max Fouls: " << maxFouls << '\n';
+	cout << "Players (AM): "
 		<< player1 << ", " << player2 << ", " << player3 << ", " << player4 << ", " << player5
 		<< '\n';
 }

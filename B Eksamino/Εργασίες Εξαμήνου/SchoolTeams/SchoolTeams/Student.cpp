@@ -1,9 +1,13 @@
 ﻿#include "Student.h"
-#include <iostream>
 
-Student::Student(int am, std::string lastName, std::string firstName,
-	std::string fatherName, std::string birthDate,
-	std::string phone, std::string address, std::string specialty)
+#include <iostream>
+#include <string>
+using std::string;
+using std::cout;
+
+Student::Student(int am, string lastName, string firstName,
+	string fatherName, string birthDate,
+	string phone, string address, string specialty)
 {
 	this->am = am;
 	this->lastName = lastName;
@@ -15,7 +19,7 @@ Student::Student(int am, std::string lastName, std::string firstName,
 	this->specialty = specialty;
 }
 
-Student::Student(int am, std::string lastName, std::string firstName)
+Student::Student(int am, string lastName, string firstName)
 {
 	this->am = am;
 	this->lastName = lastName;
@@ -24,19 +28,19 @@ Student::Student(int am, std::string lastName, std::string firstName)
 
 int Student::getAM() { return am; }
 
-std::string Student::getLastName() { return lastName; }
+string Student::getLastName() { return lastName; }
 
-std::string Student::getFirstName() { return firstName; }
+string Student::getFirstName() { return firstName; }
 
-std::string Student::getFatherName() { return fatherName; }
+string Student::getFatherName() { return fatherName; }
 
-std::string Student::getBirthDate() { return birthDate; }
+string Student::getBirthDate() { return birthDate; }
 
-std::string Student::getPhone() { return phone; }
+string Student::getPhone() { return phone; }
 
-std::string Student::getAddress() { return address; }
+string Student::getAddress() { return address; }
 
-std::string Student::getSpecialty() { return specialty; }
+string Student::getSpecialty() { return specialty; }
 
 void Student::setLastName(std::string lastName)
 {
@@ -75,12 +79,12 @@ void Student::setSpecialty(std::string specialty)
 
 void Student::print() const
 {
-	std::cout << "------------------------------\n";
-	std::cout << "Student AM: " << am << '\n';
-	std::cout << "Name: " << firstName << " " << lastName << '\n';
-	std::cout << "Father's Name: " << fatherName << '\n';
-	std::cout << "Birth Date: " << birthDate << '\n';
-	std::cout << "Phone: " << phone << '\n';
-	std::cout << "Address: " << address << '\n';
-	std::cout << "Specialty: " << specialty << '\n';
+	cout << "------------------------------\n";
+	cout << "Student AM: " << am << '\n';
+	cout << "Name: " << firstName << " " << lastName << '\n';
+	cout << "Father's Name: " << fatherName << '\n';
+	cout << "Birth Date: " << birthDate << '\n';
+	cout << "Phone: " << phone << '\n';
+	cout << "Address: " << address << '\n';
+	cout << "Specialty: " << specialty << '\n';
 }
