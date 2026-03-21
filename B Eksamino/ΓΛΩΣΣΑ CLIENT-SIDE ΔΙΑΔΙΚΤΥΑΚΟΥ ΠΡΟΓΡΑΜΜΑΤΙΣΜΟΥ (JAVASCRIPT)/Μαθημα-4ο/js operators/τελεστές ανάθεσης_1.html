@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Τελεστές Ανάθεσης</title>
+</head>
+	
+<body>
+	<h2>Τελεστές ανάθεσης</h2>
+	<p>οι τελεστές ανάθεσης αναθέτουν τιμές στις μεταβλητές javascript ,x=5, x+=5, x-=5,</p>
+	<p id="addition"></p>
+	<p>Παράδειγμα f=66, f -=10</p>
+	<p id="subtraction"></p>
+	<h1>τελεστης ανάθεσης πολ/σμου m *= 2</h1>
+	<p id="multiplication"></p>
+	
+	<h1>τελεστης ανάθεσης διαίρεσης d /= 2</h1>
+	<p id="division"></p>
+	
+	<h1>τελεστης ανάθεσης εκθέτη e **= 2 </h1>
+	<p id="exponential"></p>
+	<h1>τελεστης ανάθεσης υπολοίπου x %= 3</h1>
+	<p class="mod"></p>
+	<script>
+		let a,s,d,m, e, mod;
+		a = 50;
+		a += 5; //a= a + 5
+		s = 66; 
+		s -= 10; //s = s-10
+		//τελεστής ανάθεσης πολλαπλασιασμού και διαίρεσης
+		m=45;//οριστικοποίηση μεταβλητής
+		m *= 2;//m=m*2, τελεστής ανάθεσης πολ/σμου
+		d=3555;//variable initialization
+		d /= 2; //d=d/2 τελεστής ανάθεσης διαίρεση
+		e=3; //variable initialization
+		e **= 2;// e = e**2 εκθέτικός τελεστής ανάθεσης
+		mod=10;
+		mod %= 2;// mod =mod%2 τελεστής υπολοίπου
+		document.getElementById("addition").innerHTML=a;
+		document.getElementById("subtraction").innerHTML=s;
+		document.getElementById("multiplication").innerHTML=m;
+		document.getElementById("division").innerHTML=d;
+		document.querySelector("#exponential").innerHTML=e;
+		document.querySelector(".mod").innerHTML=mod;
+	
+		
+	</script>
+</body>
+</html>

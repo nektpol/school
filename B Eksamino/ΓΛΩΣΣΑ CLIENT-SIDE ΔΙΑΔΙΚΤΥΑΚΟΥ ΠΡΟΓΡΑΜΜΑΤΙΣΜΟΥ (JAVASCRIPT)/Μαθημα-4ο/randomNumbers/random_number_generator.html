@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Random Number Generator</h1>
+<p>Το αντικείμενο JavaScript Math διαθέτει μια μέθοδο τυχαίας δημιουργίας αριθμών random(), η οποία παράγει αριθμούς από 0 έως 0,999999999...</p>
+<p id="randomNumber"></p>
+
+<p> Τώρα, ας δούμε πώς μπορούμε να χρησιμοποιήσουμε τη μέθοδο random() για να δημιουργήσουμε έναν τυχαίο αριθμό μεταξύ 0 και 10:</p>
+<p id="random"></p>
+<p id="randomIntNum"></p>
+<p id="random0To10"></p>
+<p id ="stringChar"></p>
+	<script>
+       
+		let randomNum = Math.random(); 
+        document.getElementById('randomNumber').innerHTML=randomNum;
+        //θέλουμε να εμφανίσουμε τυχαίες αριθμητικές απο το 0 εως και το 9
+        //πολλαπλασιάζουμε την math.random() με τον αριθμό 10, δηλαδη προσθέτουμε στην max τιμή του συνόλου την μονάδα (9+1=10)
+        //εμφάνιση αριθμών απο το 0 εως το 9,99
+        let num0To10 = randomNum * 10;
+        document.getElementById("random").innerHTML= num0To10; // αυτό δίνει: ελάχιστο 0 και μέγιστο 10,99
+        //εμφάνιση τιμών απο το 0 εως το 9 με την χρήση της μεθόδου floor()
+        let roundNum0To9= Math.floor(num0To10);//εμφανίζει τιμές μεταξύ 0 και 9
+        document.getElementById("randomIntNum").innerHTML = roundNum0To9;
+        //εμφανίζει τιμές μεταξύ 1 και 10
+        let roundNum1To10=Math.ceil(num0To10);
+        document.getElementById('random0To10').innerHTML=roundNum1To10;
+        //εμφάνιση διάφορων χαρακτήρων απο την λέξη javascript
+         let string='Javascript';
+        document.getElementById('stringChar').innerHTML= string.charAt(roundNum0To9);
+
+	</script>
+</body>
+</html>

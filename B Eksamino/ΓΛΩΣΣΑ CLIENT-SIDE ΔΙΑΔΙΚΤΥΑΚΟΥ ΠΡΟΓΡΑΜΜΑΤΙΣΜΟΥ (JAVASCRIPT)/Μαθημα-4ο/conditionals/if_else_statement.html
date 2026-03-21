@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Η δήλωση if else</title>
+<style>
+	#demo{
+		color:#599148;
+	}
+</style>
+</head>
+<body>
+	<h1>Η δήλωση if else</h1>
+	<p>Χρησιμοποιήστε την εντολή else για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί εάν η συνθήκη είναι ψευδής.Η ψευδής συνθήκη καθορίζεται με την συγκριση της τιμής της  μεταβλητή (age=17) και της συνθήκης (age>18) .</p>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="raining"></p>
+	<script>
+		/*//
+  Η δήλωση else -συνταξη
+
+Χρησιμοποιήστε την εντολή else για να καθορίσετε ένα μπλοκ κώδικα που θα εκτελεστεί εάν η συνθήκη είναι ψευδής.
+if (συνθήκη) {
+  // μπλοκ κώδικα που θα εκτελεστεί εάν η συνθήκη είναι αληθής
+} αλλο {
+  // μπλοκ κώδικα που θα εκτελεστεί εάν η συνθήκη είναι ψευδής
+}
+  */
+		//example 1
+		let age=10;
+		if (age>18){
+			document.getElementById("demo").innerHTML="Έισαι ενήλικας!";
+		} else {
+			document.getElementById("demo").innerHTML="Εισαι ανήλικος!";
+		}
+		//example 2
+		let num=-3;
+		if (num>0){
+			document.querySelector('#demo2').innerHTML = num + " " + " is a positive number"; //διαφορετικά αυτή η έκφραση μπορεί να γραφεί: sum + " " + " is a positive number"
+		}else{
+			document.getElementById("demo2").innerHTML= `${num} is a negative number`;
+		}
+		//example 3
+		let isRaining = true; //εάν δεν τοποθετήσουμε let ή const για να ορίσουμε μεταβλητή τοτε η μεταβλητή ορίζεται αλλά ειναι global
+		//μορφοποίηση στοιχείων μέσω της javascript με την χρήση της css
+		document.getElementById("raining").style.fontSize="26px";
+		if(isRaining){
+			document.getElementById("raining").innerHTML ="You need a rain coat";
+			document.getElementById("raining").style.color="red";
+
+		}else{
+			document.getElementById("raining").innerHTML ="No need for a rain coat!Get your sun glasses!";
+			document.getElementById("raining").style.color="green";
+		}
+		
+	</script>
+</body>
+</html>
