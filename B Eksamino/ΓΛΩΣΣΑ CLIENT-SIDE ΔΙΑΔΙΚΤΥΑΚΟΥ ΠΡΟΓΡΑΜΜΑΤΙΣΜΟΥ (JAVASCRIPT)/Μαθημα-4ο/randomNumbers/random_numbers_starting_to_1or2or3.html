@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Math Object</h1>
+<h2>Math Object Properties</h2>
+
+<h3>Math.random() εμφάνιση τυχαίων αριθμούς απο 0 έως 1</h3>
+<p id="random0To1"></p>
+<h3>Math.random() εμφάνιση τυχαίων αριθμούς απο 0 έως 3</h3>
+<p id="random"></p>
+<h3>Εμφάνιση τυχαίου στρογγυλοποιημένου αριθμού απο το 0 εως το 3 </h3>
+<p id="roundNo"></p>
+<h3>Εμφάνιση τυχαίου στρογγυλοποιημένου αριθμού απο το 1.11 εως το 3,99999 </h3>
+<p id="random1To4"></p>
+<h3>Εμφάνιση τυχαίου στρογγυλοποιημένου αριθμού απο το 1 εως το 3</h3>
+<p id="round1To3"></p>
+<h3>Εμφάνιση τυχαίου στρογγυλοποιημένου αριθμού απο το 2 εως το 4</h3>
+<p id="round1To4"></p>
+<h3>Εμφάνιση τυχαίου αρνητικού δεκαδικού αριθμού από το -10 εως το 0</h3>
+<p id="randomDecNeg"></p>
+<h3>Εμφάνιση τυχαίου αρνητικού στρογγυλοποιημένου αριθμού απο το -10 εως το 0 </h3>
+<p id="randomNeg"></p>
+	<script>
+	
+	let randomNumber0To1= Math.random();
+	//εμφανιση τυχαίου αριθμού στον περιηγητή
+	document.getElementById("random0To1").innerHTML=randomNumber0To1;
+	// εμφανιση τυχαίων αριθμών απο 0 έως 3 πολλαπλασιάζοντας την μεθοδο math.random() με το 4
+	let randomNo=4*Math.random();
+	document.getElementById("random").innerHTML = randomNo;
+    
+	//Math.floor() στρογγυλοποιεί τον κάθε δεκαδικό ως προς το προηγούμενο μικρότερο αριθμό
+	let roundNo=Math.floor(randomNo);//δημιουργεί τυχαίους ακέραιους αριθμούς συνδυαστικά με την χρήση των μεθόδων Math.floor() και Math.random() απο το 0 εως το 3
+	document.getElementById("roundNo").innerHTML = roundNo;
+    
+    //creating random numbers from 1,111 to 3,9999
+     //formula of creating random numbers that range between any numbers
+    // Math.random()*(max-min) + min -> Math.random() * (4-1) + 1= 
+    let random1To4 = Math.random() *(4-1) + 1; //displays values from 
+    document.getElementById('random1To4').innerHTML=random1To4;
+   
+    //display values from 1 to 3 by rounding them down using floor method=> the interval that applies to floor() is [1,4) which means that 1 will be displayed some time while 4 will not be included to the random values displayed.
+    let roundDown =Math.floor(random1To4);
+    document.querySelector("#round1To3").innerHTML=roundDown;
+
+    //display values from 2 to 4 by rounding up variable random1to4 using ceil method=> the correspondent interval that applies to ceil is (1, 4] which means that 1 will not be displayed at all during the random process , so the minimum value that will be displayed randomly is 2 and the maximum is 4  
+    let roundUp =Math.ceil(random1To4);
+	document.querySelector("#round1To4").innerHTML=roundUp;
+    //displaying random negative numbers from -10 to 0
+    let randomNeg = Math.random()*(0-(-10))+(-10);//it will display values from -9.999 to -0,000001
+    document.getElementById('randomDecNeg').innerHTML=randomNeg;
+    //it displays values from -10 to -1 that is represented by the interval [-10,0)
+    let randomNegRound=Math.floor(randomNeg);
+    document.getElementById('randomNeg').innerHTML=randomNegRound;
+    </script>
+</body>
+</html>

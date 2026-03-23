@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Η δήλωση if</title>
+<style>
+	#demo2{
+
+	}
+	.demo3{
+
+	}
+	p{
+
+	}
+</style>
+</head>
+<body>
+	<h1>Η δήλωση if</h1>
+	<p></p>
+	<p>Χρησιμοποιήστε τη δήλωση if για να καθορίσετε ένα μπλοκ κώδικα JavaScript που θα εκτελεστεί εάν μια συνθήκη είναι αληθής.</p>
+	
+	<p>if (συνθήκη) {
+  			// μπλοκ κώδικα που θα εκτελεστεί εάν η συνθήκη είναι αληθής
+		}
+ </p>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+	<p class="demo3"></p>
+	<script>
+		let age=25;
+		if (age>18){
+			document.getElementById("demo").innerHTML="Έισαι ενήλικας";
+		}
+
+		let num =3;
+		if (num>0){
+			//Η μέθοδος querySelector() επιλέγει το πρώτο στοιχείο που ταιριάζει ανάλογα με τον επιλογέα που εσωκλείεται εντός των παρενθέσεων ειδικά στην περίπτωση . Η μέθοδος querySelector() μπορεί να δεχθεί ως ορίσματα μια κλάση, ένα αναγνωριστικό ή μια ετικέτα ενός στοιχείου της html ανάμεσα σε εισαγωγικά.
+			document.querySelector("#demo2").innerHTML = `${num} is a positive number `; //num + " " + "is a positive number";  //η έκφραση ${num} αποδίδει, έχει αποτέλεσμα μόνο με την χρήση των `` backticks (οξείες - που βρίσκονται κάτω απο το πλήκτρο ESC)
+		}
+		
+		let isRaining = true;
+		if(isRaining){
+			document.querySelector(".demo3").innerHTML = "Remember to take your rain coat";
+		}
+
+	</script>
+</body>
+</html>
