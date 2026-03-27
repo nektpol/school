@@ -6,22 +6,16 @@ using std::cout;
 TeamMember::TeamMember(int mo, string name, string nickname,
 	int maxScore, int maxFouls,
 	string coach, string specialty,
-	int p1, int p2, int p3, int p4, int p5)
-{
-	this->mo = mo;
-	this->name = name;
-	this->nickname = nickname;
-	this->maxScore = maxScore;
-	this->maxFouls = maxFouls;
-	this->coach = coach;
-	this->specialty = specialty;
-
-	player1 = p1;
-	player2 = p2;
-	player3 = p3;
-	player4 = p4;
-	player5 = p5;
-}
+	Student st1, Student st2, Student st3, Student st4, Student st5)
+	: mo(mo),
+	name(name),
+	nickname(nickname),
+	maxScore(maxScore),
+	maxFouls(maxFouls),
+	coach(coach),
+	specialty(specialty),
+	team{ st1, st2, st3, st4, st5 }
+{}
 
 int TeamMember::getMO() { return mo; }
 
@@ -69,6 +63,13 @@ void TeamMember::setSpecialty(std::string specialty)
 
 void TeamMember::print() const
 {
+	// Student getters are not const; copy each player before reading names.
+	Student p1 = team[0];
+	Student p2 = team[1];
+	Student p3 = team[2];
+	Student p4 = team[3];
+	Student p5 = team[4];
+
 	cout << "==============================\n";
 	cout << "Team MO: " << mo << '\n';
 	cout << "Team Name: " << name << " (" << nickname << ")" << '\n';
@@ -76,7 +77,11 @@ void TeamMember::print() const
 	cout << "Specialty: " << specialty << '\n';
 	cout << "Max Score: " << maxScore << '\n';
 	cout << "Max Fouls: " << maxFouls << '\n';
-	cout << "Players (AM): "
-		<< player1 << ", " << player2 << ", " << player3 << ", " << player4 << ", " << player5
-		<< '\n';
+	cout << "Players: "
+		<< p1.getLastName() << ", "
+		<< p2.getLastName() << ", "
+		<< p3.getLastName() << ", "
+		<< p4.getLastName() << ", "
+		<< p5.getLastName() << '\n';
+		
 }

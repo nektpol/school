@@ -1,6 +1,7 @@
 ﻿#pragma once
 
 #include <string>
+#include "Student.h"
 
 class TeamMember
 {
@@ -14,18 +15,15 @@ private:
 	std::string coach;
 	std::string specialty;
 
-	int player1;
-	int player2;
-	int player3;
-	int player4;
-	int player5;
+	Student team[5];
+	
 
 public:
 
 	TeamMember(int mo, std::string name, std::string nickname,
 		int maxScore, int maxFouls,
 		std::string coach, std::string specialty,
-		int p1, int p2, int p3, int p4, int p5);
+		Student st1, Student st2, Student st3, Student st4, Student st5);
 
 	// Getters
 	int getMO();
