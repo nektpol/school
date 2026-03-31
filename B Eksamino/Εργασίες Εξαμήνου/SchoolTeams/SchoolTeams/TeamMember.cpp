@@ -14,7 +14,7 @@ TeamMember::TeamMember(int mo, string name, string nickname,
 	maxFouls(maxFouls),
 	coach(coach),
 	specialty(specialty),
-	team{ st1, st2, st3, st4, st5 }
+	team{st1, st2, st3, st4, st5} 
 {}
 
 int TeamMember::getMO() { return mo; }

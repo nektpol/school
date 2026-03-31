@@ -209,8 +209,8 @@ int main(int argc, char* argv[])
     };
 
     // Teams
-    TeamMember team1(100,"Delta Coders","Hackers",95,10,"Coach Nikos","Informatics",1,3,5,7,9);
-    TeamMember team2(200,"Delta Mechanics","Iron Team",88,12,"Coach Giorgos","Mechanical",2,4,6,8,10);
+    TeamMember team1(100,"Delta Coders","Hackers",95,10,"Coach Nikos","Informatics",s1,s3,s5,s7,s9);
+    TeamMember team2(200,"Delta Mechanics","Iron Team",88,12,"Coach Giorgos","Mechanical",s2,s4,s6,s8,s10);
 
     vector<TeamMember> teams = { team1, team2 };
 
