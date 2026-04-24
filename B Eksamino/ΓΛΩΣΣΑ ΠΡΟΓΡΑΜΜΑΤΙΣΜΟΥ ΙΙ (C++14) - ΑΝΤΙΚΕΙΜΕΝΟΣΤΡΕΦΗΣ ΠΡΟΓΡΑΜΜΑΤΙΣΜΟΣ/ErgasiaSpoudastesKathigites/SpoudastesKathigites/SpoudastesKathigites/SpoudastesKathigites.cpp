@@ -20,9 +20,9 @@ public:
     // Constructor
     DeltaMember(string n, string fn, int a, long p, long cp,
                 string fName, bool married, string fam, string pob)
-        : name(n), firstName(fn), age(a), phone(p), cellPhone(cp),
-          fatherName(fName), isMarried(married),
-          familyMembers(fam), placeOfBirth(pob) {}
+        : name(std::move(n)), firstName(std::move(fn)), age(a), phone(p), cellPhone(cp),
+          fatherName(std::move(fName)), isMarried(married),
+          familyMembers(std::move(fam)), placeOfBirth(std::move(pob)) {}
 
     // Getters
     string getName() { return name; }
@@ -45,7 +45,7 @@ public:
             string fName, bool married, string fam, string pob,
             vector<int> g, string sClass)
         : DeltaMember(n, fn, a, p, cp, fName, married, fam, pob),
-          grades(g), studentClass(sClass) {}
+          grades(std::move(g)), studentClass(std::move(sClass)) {}
 
     double getAverage() {
         double sum = 0;
@@ -67,13 +67,14 @@ public:
             string fName, bool married, string fam, string pob,
             double sal, string bach, int years, string c = "")
         : DeltaMember(n, fn, a, p, cp, fName, married, fam, pob),
-          salary(sal), bachelor(bach),
-          yearsExperience(years), course(c) {}
+          salary(sal), bachelor(std::move(bach)),
+          yearsExperience(years), course(std::move(c)) {}
 
-    double getSalary() { return salary; }
-    int getYearsExperience() { return yearsExperience; }
+    double getSalary() const { return salary; }
+    int getYearsExperience() const { return yearsExperience; }
 
-    int getDegreesCount() {
+    int getDegreesCount() const
+    {
         int count = 0;
         if (bachelor != "") count++;
         return count; // απλό για άσκηση
@@ -111,33 +112,33 @@ int main() {
     cout << "\n--- Student Averages ---\n";
     for (auto &s : students)
         cout << s.getName() << " " << s.getFirstName()
-             << " Avg: " << s.getAverage() << endl;
+             << " Avg: " << s.getAverage() << '\n';
 
     // ================= TEACHER DATA =================
     cout << "\n--- Teachers Experience ---\n";
     for (auto &t : teachers)
         cout << t.getName() << " " << t.getFirstName()
-             << " Years: " << t.getYearsExperience() << endl;
+             << " Years: " << t.getYearsExperience() << '\n';
 
     // ================= MARRIED MEMBERS =================
     cout << "\n--- Married Members ---\n";
     for (auto &t : teachers)
         if (t.getIsMarried())
-            cout << t.getName() << " " << t.getFirstName() << endl;
+            cout << t.getName() << " " << t.getFirstName() << '\n';
 
     for (auto &s : students)
         if (s.getIsMarried())
-            cout << s.getName() << " " << s.getFirstName() << endl;
+            cout << s.getName() << " " << s.getFirstName() << '\n';
 
     // ================= AVG SALARY =================
     double sumSalary = 0;
     for (auto &t : teachers) sumSalary += t.getSalary();
-    cout << "\nAverage Salary: " << sumSalary / teachers.size() << endl;
+    cout << "\nAverage Salary: " << sumSalary / teachers.size() << '\n';
 
     // ================= AVG GRADE ALL STUDENTS =================
     double totalAvg = 0;
     for (auto &s : students) totalAvg += s.getAverage();
-    cout << "Average Student Grade: " << totalAvg / students.size() << endl;
+    cout << "Average Student Grade: " << totalAvg / students.size() << '\n';
 
     return 0;
 }
