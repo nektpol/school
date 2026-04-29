@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch</h1>
+
+    <input id="text" value="" oninput="myFunction()" placeholder="type in a weekday">
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let userInput = document.getElementById("text").value;
+            let day = userInput.toLowerCase().trim();
+            let currentDay;
+            currentDay = `Today is ${day}`;
+            el2 = document.getElementById("demo");
+            switch (day) {
+                case "monday":
+                    el2.innerHTML = currentDay;
+                    el2.style="color:blue;";
+                    break;
+                case "tuesday":
+                    el2.innerHTML = currentDay;
+                    el2.style="color:green;";
+                    break;
+                case "wednesday":
+                    el2.innerHTML = currentDay;
+                    el2.style="color:yellow;";
+                    break;
+                case "thursday":
+                    el2.innerHTML = currentDay;
+                    el2.style="color:orange;";
+                    break;
+                case "friday":
+                    el2.innerHTML = currentDay;
+                    el2.style="color:red;";
+                    break;
+                case "saturday":
+                    el2.innerHTML = "Weekend!";
+                    el2.style="color:purple;";
+                    break;
+                case "sunday":
+                    el2.innerHTML = "Weekend!";
+                    el2.style="color:purple;";
+                    break;
+                default:
+                    el2.innerHTML = "Unknown day!";
+                    el2.style="color:black;";
+            }
+        }
+    </script>
+</body>
+</html>

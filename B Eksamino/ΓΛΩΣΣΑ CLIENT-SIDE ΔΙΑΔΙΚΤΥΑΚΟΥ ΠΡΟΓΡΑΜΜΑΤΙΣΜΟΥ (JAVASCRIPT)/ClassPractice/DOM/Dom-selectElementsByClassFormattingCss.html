@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Finding HTML Elements by Class Name.</p>
+    <p class="intro">Hello World!</p>
+    <p class="intro"> This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+    <div class="intro">This example demonstrates the <b>getElementsByClassName</b> method. </div>
+    
+    <script>
+        const x = document.getElementsByClassName("intro");
+        let element = " ";
+        for (let i = 0; i < x.length; i++) {
+            x[i].style="color:maroon; padding:6px; width:400px; text-align:right; border-right:2px solid #333;";
+        }
+    </script>
+
+</body>
+</html>

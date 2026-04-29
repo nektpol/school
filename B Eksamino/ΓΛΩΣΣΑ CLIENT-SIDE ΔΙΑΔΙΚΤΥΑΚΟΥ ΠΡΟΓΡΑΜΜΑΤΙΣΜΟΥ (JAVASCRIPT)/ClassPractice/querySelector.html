@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Η μέθοδος querySelector</h1>
+    <p class="demo">text 1</p>
+    <p class="demo">text 2</p>
+    <p class="demo">text 3</p>
+    <p id="raining">raining</p>
+
+    <a href="#">link1</a>
+    <a href="#">link2</a>
+    <a href="#">link3</a>
+
+    <script>
+        const el=document.querySelector(".demo");
+        el.style="color:blue;";
+        const el2=document.querySelector("a");
+        el2.style="color:green;";
+    </script>
+
+</body>
+</html>

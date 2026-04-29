@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        let userInput = prompt("What is the weather like today?");
+        let weather = userInput.toLowerCase().trim();
+        let currentWeather = `Today's weather is ${weather}`;
+        document.getElementById("demo").innerHTML = currentWeather;
+        let notification;
+        let el=document.getElementById("demo1");
+        switch (weather) {
+            case "rainy":
+                notification = "Remember to take your rain coat and an umbrella.";
+                el.style="color:blue;";
+                break;
+            case "sunny":
+                notification = "Go outside to the beach and have fun.";
+                el.style="color:orange;";
+                break;
+            case "cloudy":
+                notification="It might be a bit cold, you better take a jacket.";
+                el.style="color:gray;";
+                break;
+            default:
+                notification="Unknown weather type!";
+                el.style="color:red;";
+        }
+        el.innerHTML = notification;
+    </script>
+</body>
+</html>
