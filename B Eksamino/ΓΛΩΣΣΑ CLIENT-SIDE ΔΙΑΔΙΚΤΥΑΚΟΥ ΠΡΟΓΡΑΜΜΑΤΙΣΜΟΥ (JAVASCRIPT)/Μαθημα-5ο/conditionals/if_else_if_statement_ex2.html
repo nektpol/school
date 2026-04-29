@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Η δήλωση if else</title>
+</head>
+<body>
+	<h1>Η δήλωση if else</h1>
+	<p>Χρησιμοποιήστε τη δήλωση else if για να καθορίσετε μια νέα συνθήκη εάν η πρώτη είναι ψευδής.</p>
+	<p id="demo"></p>
+	<script>
+		let weather="s";
+        let notification;
+		let el=document.getElementById("demo");
+		if (weather ==="rainy"){
+            notification = "You need a rain coat";
+			el.innerHTML= notification;
+			el.style='color:red; font-size:30px;border-bottom:1px solid red; width:50%;';
+		} else if (weather === "cloudy") {
+            notification="It might be cold, you need a jacket";
+			el.innerHTML=notification;
+			el.style='color:green; font-size:34px;';
+		}else if (weather === "sunny"){
+			notification="You can go out freely..Have a nice time";
+          	el.innerHTML = notification;
+			el.style='color:orange; font-size:30px;';
+		} else {
+            notification="check again the weather forecast";
+            el.innerHTML= notification;
+			el.style='color:blue; font-size:30px;';
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Η δήλωση switch</title>
+</head>
+<body>
+	<h1>switch </h1>
+	<p>Το Switch είναι μια εναλλακτική λύση για το if else if else else. Η δήλωση switch ξεκινά με τη λέξη κλειδί switch, ακολουθούμενη από μια παρένθεση και ένα μπλοκ κώδικα. Μέσα στο μπλοκ κώδικα θα έχουμε διαφορετικές περιπτώσεις. Το μπλοκ case εκτελείται εάν η τιμή στην παρένθεση της δήλωσης switch ταιριάζει με την τιμή case. Η δήλωση break είναι για να τερματίσει την εκτέλεση, ώστε η εκτέλεση του κώδικα να μην συνεχιστεί μετά την ικανοποίηση της συνθήκης. Το μπλοκ προεπιλογής (default) εκτελείται εάν όλες οι περιπτώσεις δεν ικανοποιούν τη συνθήκη.</p>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<script>
+//first example
+// το switch χρησιμοποιεί, στο παρασκήνιο, την αυστηρή ισότητα.
+        let weather ="sunny";
+		//let weather="rainy"; στο παρασκήνιο βλέπει weather === "rainy"
+        let notification;
+        let el = document.getElementById("demo");
+		switch(weather){
+            case "rainy": 
+            notification="You need a rain coat"; 
+            el.innerHTML=notification;
+            el.style="color:blue; font-size:32px; width:50%; border-right:4px solid blue; text-align:right; padding:8px;";
+            break; // σταματά την εκτέλεση του κώδικα έαν η τιμή στο case ειναι ίση με την τιμή της μεταβλητής weather. Χωρίς την χρήση του break, η εκτέλεση προχωρά σto επόμενo case.
+            case "cloudy":
+            notification="It might be cold, you need a jacket";
+             el.innerHTML=notification;
+             el.style="color:purple; font-size:36px;width:50%; border-right:4px solid purple; text-align:right; padding:8px;";
+            break;
+            case "sunny":  
+            notification="go out freely!!";
+            el.innerHTML=notification;
+            el.style="color:orange; font-size:36px; width:50%; border-right:4px solid orange; text-align:right; padding:8px;";
+            break;
+            default: 
+            notification="check the weather forecast!!!";
+             el.innerHTML=notification;
+            el.style="color:red; font-size:36px; width:50%; border-right:4px solid red; text-align:right; padding:8px;";
+        }
+        //Χρησιμοποιήστε τη δήλωση switch όταν ελέγχετε συγκεκριμένες τιμές, όχι εύρη.
+	</script>
+</body>
+</html>

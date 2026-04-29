@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>η δήλωση switch</title>
+</head>
+
+<body>
+	<h1>H δήλωση switch</h1>
+<p>
+Χρησιμοποιήστε τη δήλωση switch για να επιλέξετε ένα από τα πολλά μπλοκ κώδικα που θα εκτελεστούν.</p>
+	<h2>Σύνταξη switch</h2>
+	<p>switch(έκφραση) { <br>
+  case x: <br>
+    //τμήμα κώδικα <br>
+    break; <br>
+  case y: <br>
+    //τμήμα κώδικα <br>
+    break; <br>
+  default: <br>
+    //τμήμα κώδικα <br>
+} </p>
+<p>με αυτό τον τρόπο δουλεύει: <br>
+
+    Η έκφραση του switch αξιολογείται μία φορά.<br>
+    Η τιμή της έκφρασης συγκρίνεται με τις τιμές της κάθε περίπτωσης.<br>
+    Εάν υπάρχει αντιστοιχία, εκτελείται το συσχετισμένο μπλοκ κώδικα.<br>
+    Εάν δεν υπάρχει αντιστοίχιση, εκτελείται το προεπιλεγμένο μπλοκ κώδικα. <br>
+</p>
+<h2>Σύνταξη</h2>
+
+<p>Στο παρακάτω παράδειγμα,η μέθοδος getDay() επιστρέφει την ημέρα της εβδομάδας ως αριθμό μεταξύ 0 και 6.
+(Κυριακή=0, Δευτέρα=1, Τρίτη=2 ..)
+Αυτό το παράδειγμα χρησιμοποιεί τον αριθμό της ημέρας για να υπολογίσει την ημέρα:</p>
+<p id="demo"></p>
+	<script>
+let days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+		let day;
+		switch(new Date().getDay()){
+			case 0:
+			day=days[0];
+			break;
+			case 1:
+			day=days[1];
+			break;
+			case 2:
+			day=days[2];
+			break;
+			case 3:
+			day=days[3];
+			break;
+			case 4:
+			day=days[4];
+			break;
+			case 5:
+			day=days[5];
+			case 6:
+			day=days[6];
+		}
+		document.getElementById('demo').innerHTML= "today is " + day;
+		</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Η δήλωση switch</title>
+</head>
+<body>
+	<h1>Ternary operators-Τριμερής Τελεστές </h1>
+	<p>Ένας άλλος τρόπος για να γράψετε όρους κατα συνθηκη-conditionals είναι η χρήση τριμερών τελεστών.Μια τριμελής συνάρτηση επιστρέφει μια τιμή. Χρησιμοποιήστε την όταν χρειάζεστε μια τιμή, όχι απλώς για να εκτελέσετε σύνθετη λογική.Χρησιμοποιείται με εκφράσεις(expressions)(χ>10), οχι με δηλώσεις/statements </p>
+	<p>σύνταξη τριμερούς τελεστή <b>condition ? valueIfTrue : valueIfFalse </b></p>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<script>
+//first example
+	let isRaining =true;
+     //η συνθήκη που ελέγχεται , το ? χωρίζει την συνθήκη με την περίπτωση που είναι αληθής η συνθήκη, η ανω και κάτω τελεία διαχωρίζει την περίπτωση που η συνθήκη είναι ψευδής.
+  let condition= (isRaining) ? "You need a rain coat":"no need for a rain coat";
+  document.getElementById("demo").innerHTML=condition;
+
+  let age=20;
+  let status= age >=18 ? "adult":"underage";
+   document.getElementById("demo1").innerHTML=status;
+  //A ternary returns a value. Use it when you need a value, not just to execute logic.It’s for expressions, not statements
+  //like age >= 18 ? console.log("adult") : console.log("minor");
+
+  //Οι τριμερείς δομές είναι ιδανικές για σύντομες συνθήκες,οπως τα παραπάνω παραδείγματα.
+  let score= 85;
+  //Αποφύγετε τον πολυεπίπεδο εκφωλιασμό οπως
+  const message = score>90 ? "A" : score > 75 ? "B":"C";//εμποδίζει την αναγνωσιμότητα.σε αυτες τις περπτώσεις χρησιμοποιείστε το if else ή το switch.
+  document.getElementById("demo2").innerHTML=message;
+	</script>
+</body>
+</html>

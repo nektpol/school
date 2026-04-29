@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Η δήλωση switch</title>
+</head>
+<body>
+	<h1>switch </h1>
+	<p>Το Switch είναι μια εναλλακτική λύση για το if else if else else. Η δήλωση switch ξεκινά με τη λέξη κλειδί switch, ακολουθούμενη από μια παρένθεση και ένα μπλοκ κώδικα. Μέσα στο μπλοκ κώδικα θα έχουμε διαφορετικές περιπτώσεις. Το μπλοκ case εκτελείται εάν η τιμή στην παρένθεση της δήλωσης switch ταιριάζει με την τιμή case. Η δήλωση break είναι για να τερματίσει την εκτέλεση, ώστε η εκτέλεση του κώδικα να μην συνεχιστεί μετά την ικανοποίηση της συνθήκης. Το μπλοκ προεπιλογής (default) εκτελείται εάν όλες οι περιπτώσεις δεν ικανοποιούν τη συνθήκη.</p>
+	<p id="demo1"></p>
+	<script>
+        //second example
+        let userInput = prompt("What day is today??");
+        let day = userInput.toLowerCase().trim();//η ημέρα που εισάγει ο χρήστης μετατρέπεται σε πεζά με την μέθοδο toLowerCase() ώστε να ταιριάζει με τις τιμές του κάθε case εντός του switch
+        let currentDay;
+         currentDay=`Today is ${day}`;//"Today is" + " " + day
+        let el2= document.getElementById("demo1");
+        switch(day){
+            case "monday":
+               el2.innerHTML="Δευτέρα κάτι έχω...";
+                break;
+            case "tuesday":
+                 el2.innerHTML=currentDay;
+                break;
+             case "wednesday":
+                 el2.innerHTML=currentDay;
+                break;
+            case "thurday":
+                 el2.innerHTML=currentDay;
+                break;
+            case "friday":
+                 el2.innerHTML=currentDay;
+                break;
+            case "saturday":
+                el2.innerHTML=currentDay;
+                break;
+            case "sunday":
+                 el2.innerHTML=currentDay;
+                break;
+                default: 
+                el2.innerHTML="It is not a week day!";
+            }
+	</script>
+</body>
+</html>
