@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>anonymous function with return</h2>
+    <p id="indefiniteprm"></p>
+    <h2>anonymous function without return</h2>
+    <p id="definiteprm"></p>
+    <h2>self invoking function</h2>
+    <p id="selfinvfunction"></p>
+
+    <script>
+        const square = function(x) {
+            return x * x;
+        }
+
+        document.getElementById("indefiniteprm").innerHTML = square(5);
+
+        const square1 = function(x) {
+            let y = x * x;
+            document.getElementById("definiteprm").innerHTML = y;
+        }
+        square1(5);
+
+        (function(x) {
+            let y = x * x;
+            document.getElementById("selfinvfunction").innerHTML = y;
+        })(5);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+            color: #154406;
+            border-left: 4px solid green;
+        }
+        #raining{
+            
+        }
+        .demo{
+
+        }
+        a{
+
+        }
+        p{
+
+        }
+    </style>
+</head>
+<body>
+    <h1> h methodos querySelector</h1>
+    <p class="demo"> text 1</p>
+    <p class="demo"> text 2</p>
+    <p class="demo"> text 3</p>
+    <p id="raining">raining</p>
+
+    <a href="#">link1</a>
+    <a href="#">link2</a>
+    <a href="#">link3</a>
+
+    <script>
+        const el=document.querySelector(".demo");
+        el.style="color:blue;";
+        const el2=document.querySelector("a");
+        el2.style="text-decoration:none; color:green;";
+        const el3=document.querySelector("#raining");
+        el3.style="color:red;";
+    </script>
+</body>
+</html>

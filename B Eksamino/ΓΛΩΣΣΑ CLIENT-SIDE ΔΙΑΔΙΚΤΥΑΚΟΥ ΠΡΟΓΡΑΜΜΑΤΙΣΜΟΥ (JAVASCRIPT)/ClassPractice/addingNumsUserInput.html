@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dilosi sinartisis xoris parametrous</h2>
+    <label for="number1">Number 1</label>
+    <input id="number1" name="number1">
+    <p id="erMes1"></p>
+    <label for="number2">Number 2</label>
+    <input id="number2" name="number2">
+    <p id="erMes2"></p>
+    <input type="submit" value="sum" onclick="addNumbers()">
+    <p id="addNumbers"></p>
+    <script>
+        function addNumbers(){
+            let numOne=document.getElementById("number1").value;
+            let numTwo=document.getElementById("number2").value;
+            let num1Input=Number(numOne);
+            let num2Input=Number(numTwo);
+            if(isNaN(num1Input)){
+                document.getElementById("erMes1").innerHTML="Please enter a valid number for Number 1";
+                
+            } else if(isNaN(num2Input)){
+                document.getElementById("erMes2").innerHTML="Please enter a valid number for Number 2";
+            } else {
+                let sum=num1Input+num2Input;
+                document.getElementById("addNumbers").innerHTML="The sum is: " + sum;  
+            }
+        }
+    </script>
+</body>
+</html>

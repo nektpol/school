@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="square"></p>
+    <p id="square1"></p>
+
+    <p id="uppercase"></p>
+    <p id="fullName"></p>
+    <p id="fullNameShort"></p>
+    <p id="uppercase2"></p>
+
+    <script>
+        const square = (n) => {
+            let y = n * n;
+            return y;
+        }
+        document.getElementById("square").innerHTML = square(5);
+
+        const square1 = n => n * n;
+        document.getElementById("square1").innerHTML = square1(5);
+
+        const changeToUpperCase = arr => {
+            const newArr=[];
+            for (const element of arr) {
+                newArr.push(element.toUpperCase());
+            }
+            return newArr;
+        }
+
+        const countries = ["Finland", "Sweden", "Norway", "Denmark", "Iceland"];
+        document.getElementById("uppercase").innerHTML = changeToUpperCase(countries);
+
+        const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+        document.getElementById("uppercase2").innerHTML = changeToUpperCase(names);
+
+        const printFullName = (firstName, lastName) => {
+            return `${firstName.toUpperCase()} ${lastName.toUpperCase()}`;
+        }
+        document.getElementById("fullName").innerHTML = printFullName("nikos", "papadopoulos");
+
+        const printFullName1 = (firstName, lastName) => `${firstName} ${lastName}`;
+        document.getElementById("fullNameShort").innerHTML = printFullName1("anna", "papadopoulou");
+    </script>
+</body>
+</html>

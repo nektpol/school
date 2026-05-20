@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="indefiniteprm"></p>
+
+    <p id="indprms"></p>
+
+    <script>
+        const sumAllNums = (...args) => {
+            let sum = 0;
+            for (const element of args) {
+                sum += element;
+            }
+            return sum;
+        }
+        document.getElementById("indefiniteprm").innerHTML = sumAllNums(1, 2, 3, 4, 5);
+
+        const sumAllNums1 = (...args) => {
+            let sum = 0;
+            for (const element of args) {
+                sum += element;
+            }
+            document.getElementById("indprms").innerHTML = sum;
+        }
+        sumAllNums1(1, 2, 3, 4, 5);
+    </script>
+</body>
+</html>

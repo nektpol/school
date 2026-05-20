@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="sumarray"></p>
+    <p id="indefiniteprm"></p>
+    <p id="indprm"></p>
+    <h2>Entopismos megistis timis</h2>
+    <p id="highestValue"></p>
+    <p id="lowestValue"></p>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+        function sumArrayValues(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+        document.getElementById("sumarray").innerHTML = "Sum of array values: " + sumArrayValues(numbers);
+
+        function sumIndefiniteArguments() {
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+        document.getElementById("indefiniteprm").innerHTML = "Sum of indefinite arguments: " + sumIndefiniteArguments(1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1, 2, 121, 3, 243, 54, 64, 667, 67, 65, 54, 435, 234, 345, 354);
+
+        function sumAllNums1(){
+            let sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            document.getElementById("indprm").innerHTML = "Sum of all numbers: " + sum;
+        }
+        sumAllNums1(1,2,3,4);
+
+        function findHighestValue(arr) {
+            let highest = -Infinity;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > highest) {
+                    highest = arr[i];
+                }
+            }
+            return highest;
+        }
+        document.getElementById("highestValue").innerHTML = "Highest value: " + findHighestValue(numbers);
+
+        function findLowestValue(arr) {
+            let lowest = Infinity;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < lowest) {
+                    lowest = arr[i];
+                }
+            }
+            return lowest;
+        }
+        document.getElementById("lowestValue").innerHTML = "Lowest value: " + findLowestValue(numbers);
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+        function myCalculator(num1, num2) {
+            let mult = num1 * num2;
+            return mult;
+        }
+        let result = myCalculator(5, 5);
+        myDisplayer(result);
+
+
+
+        function myDisplayer1(y) {
+            document.getElementById("demo1").innerHTML = y;
+        }
+
+        function myCalculator1(num1, num2) {
+            let sum = num1 + num2;
+            myDisplayer1(sum);
+        }
+        myCalculator1(5, 5);
+        myCalculator1(10, 10);
+
+        myCalculator2(10, 5, myDisplayer2);
+        function myDisplayer2(subtr) {
+            document.getElementById("demo2").innerHTML = subtr;
+        }
+        function myCalculator2(num1, num2, myCallback) {
+            let y = num1 - num2;
+            myCallback(y);
+        }
+
+        
+    </script>
+</body>
+</html>
