@@ -20,16 +20,32 @@ public:
     // Constructor
     DeltaMember(string n, string fn, int a, long p, long cp,
                 string fName, bool married, string fam, string pob)
-        : name(std::move(n)), firstName(std::move(fn)), age(a), phone(p), cellPhone(cp),
-          fatherName(std::move(fName)), isMarried(married),
-          familyMembers(std::move(fam)), placeOfBirth(std::move(pob)) {}
+        : name(n), firstName(fn), age(a), phone(p), cellPhone(cp),
+          fatherName(fName), isMarried(married),
+          familyMembers(fam), placeOfBirth(pob) {}
 
     // Getters
     string getName() { return name; }
     string getFirstName() { return firstName; }
+    int getAge() { return age; }
+    long getPhone() { return phone; }
+    long getCellPhone() { return cellPhone; }
     string getFatherName() { return fatherName; }
     bool getIsMarried() { return isMarried; }
-    
+    string getFamilyMembers() { return familyMembers; }
+    string getPlaceOfBirth() { return placeOfBirth; }
+
+    // Setters
+    void setName(string n) { name = n; }
+    void setFirstName(string fn) { firstName = fn; }
+    void setAge(int a) { age = a; }
+    void setPhone(long p) { phone = p; }
+    void setCellPhone(long cp) { cellPhone = cp; }
+    void setFatherName(string fName) { fatherName = fName; }
+    void setIsMarried(bool married) { isMarried = married; }
+    void setFamilyMembers(string fam) { familyMembers = fam; }
+    void setPlaceOfBirth(string pob) { placeOfBirth = pob; }
+
     void printInfo()
     {
         cout << "Last Name: " << getName() << " First Name: " << getFirstName() << " \n";
@@ -43,14 +59,22 @@ public:
 class Student : public DeltaMember {
 private:
     vector<int> grades;
-    string studentClass;
+    string course;;
 
 public:
     Student(string n, string fn, int a, long p, long cp,
             string fName, bool married, string fam, string pob,
             vector<int> g, string sClass)
         : DeltaMember(n, fn, a, p, cp, fName, married, fam, pob),
-          grades(std::move(g)), studentClass(std::move(sClass)) {}
+          grades(g), course(sClass) {}
+
+    // Getters
+    vector<int> getGrades() { return grades; }
+    string getCourse() { return course; }
+
+    // Setters
+    void setGrades(vector<int> g) { grades = g; }
+    void setCourse(string sClass) { course = sClass; }
 
     double getAverage() {
         double sum = 0;
@@ -61,7 +85,7 @@ public:
     void printInfo()
     {
         DeltaMember::printInfo();
-        cout << "Average:" << getAverage() << " \n";
+        cout << "Course: " << getCourse() << " Average:" << getAverage() << " \n";
         cout << "------------------------------------------------" << " \n";
     }
 };
@@ -70,32 +94,41 @@ public:
 class Teacher : public DeltaMember {
 private:
     double salary;
-    string bachelor;
+    string bachelors;
+    string masters;
     int yearsExperience;
-    string course;
+    
 
 public:
     Teacher(string n, string fn, int a, long p, long cp,
             string fName, bool married, string fam, string pob,
-            double sal, string bach, int years, string c = "")
+            double sal, string bach, string mast, int years)
         : DeltaMember(n, fn, a, p, cp, fName, married, fam, pob),
-          salary(sal), bachelor(std::move(bach)),
-          yearsExperience(years), course(std::move(c)) {}
+          salary(sal), bachelors(bach), masters(mast), yearsExperience(years) {}    
 
+    // Getters
     double getSalary() const { return salary; }
     int getYearsExperience() const { return yearsExperience; }
+    string getBachelors() const { return bachelors; }
+    string getMasters() const { return masters; }
 
-    int getDegreesCount() const
-    {
+    // Setters
+    void setSalary(double sal) { salary = sal; }
+    void setYearsExperience(int years) { yearsExperience = years; }
+    void setBachelors(string bach) { bachelors = bach; }
+    void setMasters(string mast) { masters = mast; }
+
+    int getNumberOfDegrees() const {
         int count = 0;
-        if (bachelor != "") count++;
-        return count; // απλό για άσκηση
+        if (!bachelors.empty() && bachelors != "None") count++;
+        if (!masters.empty() && masters != "None") count++;
+        return count;
     }
     
     void printInfo()
     {
         DeltaMember::printInfo();
-        cout << "Degrees Count: " << getDegreesCount() << " \n";
+        cout << "Salary: " << getSalary() << " Bachelor: " << getBachelors() << " Master: " << getMasters() << " Years Experience: " << getYearsExperience() << " \n";
         cout << "------------------------------------------------" << " \n";
     }
 };
@@ -104,19 +137,19 @@ public:
 int main() {
 
     vector<Teacher> teachers = {
-        Teacher("Aris","Pappas",45,2105551234,6970000001,"Georgios",true,"1-2 Children","Athens",2500,"Mathematics",20,"Algebraic Topology"),
-        Teacher("Olga","Markou",38,2105555678,6970000002,"Dimitrios",false,"None","Thessaloniki",2100,"Physics",12),
-        Teacher("Nikos","Fourakis",50,2105559012,6970000003,"Ioannis",true,"1-2 Children","Patras",2800,"Literature",25,"Creative Writing"),
-        Teacher("Mania","Zanna",32,2105553456,6970000004,"Vasileios",false,"None","Heraklion",1900,"History",5)
+        Teacher("Aris","Pappas",45,2105551234,6970000001,"Georgios",true,"1-2 Children","Athens",2500,"Mathematics","Algebraic Topology",5),
+        Teacher("Olga","Markou",38,2105555678,6970000002,"Dimitrios",false,"None","Thessaloniki",2100,"Physics","Quantum Mechanics",7),
+        Teacher("Nikos","Fourakis",50,2105559012,6970000003,"Ioannis",true,"1-2 Children","Patras",2800,"Literature","Creative Writing",3),
+        Teacher("Mania","Zanna",32,2105553456,6970000004,"Vasileios",false,"None","Heraklion",1900,"History","Ancient Civilizations",5)
     };
 
     vector<Student> students = {
-        Student("Eleni","Karra",15,2101112222,6980000001,"Antonios",false,"Parents","Larissa",{9,10,8,9,10,9,8,7,9,10},"Class A"),
-        Student("Petros","Ladas",16,2101113333,6980000002,"Petros",true,"Parents","Volos",{5,4,6,5,7,4,5,6,5,6},"Class B"),
-        Student("Maria","Dimou",14,2101114444,6980000003,"Christos",false,"Parents","Ioannina",{10,10,9,10,10,9,10,10,9,10},"Class A"),
-        Student("Elvis","Gikas",17,2101115555,6980000004,"Stavros",true,"Parents","Chania",{7,8,7,6,7,8,9,7,8,7},"Class C"),
-        Student("Maria","Noe",15,2101116666,6980000005,"Emmanouil",false,"Parents","Rhodes",{9,8,9,10,8,9,8,9,10,9},"Class B"),
-        Student("Giannis","Vergis",16,2101117777,6980000006,"Michail",false,"None","Kalamata",{4,3,5,2,6,3,4,2,5,3},"Class C")
+        Student("Eleni","Karra",15,2101112222,6980000001,"Antonios",false,"Parents","Larissa",{9,10,8,9,10,9,8,7,9,10},"Mathematics"),
+        Student("Petros","Ladas",16,2101113333,6980000002,"Petros",true,"Parents","Volos",{5,4,6,5,7,4,5,6,5,6},"Mathematics"),
+        Student("Maria","Dimou",14,2101114444,6980000003,"Christos",false,"Parents","Ioannina",{10,10,9,10,10,9,10,10,9,10},"Information Technology"),
+        Student("Elvis","Gikas",17,2101115555,6980000004,"Stavros",true,"Parents","Chania",{7,8,7,6,7,8,9,7,8,7},"Information Technology"),
+        Student("Maria","Noe",15,2101116666,6980000005,"Emmanouil",false,"Parents","Rhodes",{9,8,9,10,8,9,8,9,10,9},"Information Technology"),
+        Student("Giannis","Vergis",16,2101117777,6980000006,"Michail",false,"None","Kalamata",{4,3,5,2,6,3,4,2,5,3},"Information Technology")
     };
     
     vector<DeltaMember> members = {
@@ -130,9 +163,30 @@ int main() {
     {
         m.printInfo();
     }
-    
-    // ================= MARRIED MEMBERS =================
 
+    // ================= PRINT STUDENTS WITH AVERAGE GRADE =================
+    cout << "Students with Average Grade:\n";
+    for (auto &s : students)
+    {
+        cout << s.getName() << " " << s.getFirstName() << " - Average Grade: " << s.getAverage() << '\n';
+    }
+
+    // ================= PRINT TEACHERS WITH NUMBER OF DEGREES =================
+    cout << "Teachers with Number of Degrees:\n";
+    for (auto &t : teachers)
+    {
+        cout << t.getName() << " " << t.getFirstName() << " - Number of Degrees: " << t.getNumberOfDegrees() << '\n';
+    }
+
+    // ================= PRINT TEACHERS WITH YEARS EXPERIENCE =================
+    cout << "Teachers with Years Experience:\n";
+    for (auto &t : teachers)
+    {
+        cout << t.getName() << " " << t.getFirstName() << " - Years Experience: " << t.getYearsExperience() << '\n';
+    }
+
+    // ================= MARRIED MEMBERS =================
+    cout << "\nMarried Members:\n";
     for (auto &s : members)
         if (s.getIsMarried())
             cout << s.getName() << " " << s.getFirstName() << '\n';
