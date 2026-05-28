@@ -29,6 +29,11 @@ public:
     string getFirstName() { return firstName; }
     string getFatherName() { return fatherName; }
     bool getIsMarried() { return isMarried; }
+    
+    void printInfo()
+    {
+        cout << "Last Name: " << getName() << " First Name: " << getFirstName() << " \n";
+    }
 
     // Virtual destructor
     virtual ~DeltaMember() {}
@@ -51,6 +56,13 @@ public:
         double sum = 0;
         for (int g : grades) sum += g;
         return sum / grades.size();
+    }
+    
+    void printInfo()
+    {
+        DeltaMember::printInfo();
+        cout << "Average:" << getAverage() << " \n";
+        cout << "------------------------------------------------" << " \n";
     }
 };
 
@@ -79,6 +91,13 @@ public:
         if (bachelor != "") count++;
         return count; // απλό για άσκηση
     }
+    
+    void printInfo()
+    {
+        DeltaMember::printInfo();
+        cout << "Degrees Count: " << getDegreesCount() << " \n";
+        cout << "------------------------------------------------" << " \n";
+    }
 };
 
 // ================= MAIN =================
@@ -99,34 +118,22 @@ int main() {
         Student("Maria","Noe",15,2101116666,6980000005,"Emmanouil",false,"Parents","Rhodes",{9,8,9,10,8,9,8,9,10,9},"Class B"),
         Student("Giannis","Vergis",16,2101117777,6980000006,"Michail",false,"None","Kalamata",{4,3,5,2,6,3,4,2,5,3},"Class C")
     };
+    
+    vector<DeltaMember> members = {
+        teachers[0], teachers[1], teachers[2], teachers[3],
+        students[0], students[1], students[2], students[3], students[4], students[5]
+    };
 
     // ================= PRINT ALL MEMBERS =================
     cout << "\n--- All Members ---\n";
-    for (auto &t : teachers)
-        cout << t.getName() << " " << t.getFirstName() << " (Teacher)\n";
-
-    for (auto &s : students)
-        cout << s.getName() << " " << s.getFirstName() << " (Student)\n";
-
-    // ================= STUDENT AVERAGE =================
-    cout << "\n--- Student Averages ---\n";
-    for (auto &s : students)
-        cout << s.getName() << " " << s.getFirstName()
-             << " Avg: " << s.getAverage() << '\n';
-
-    // ================= TEACHER DATA =================
-    cout << "\n--- Teachers Experience ---\n";
-    for (auto &t : teachers)
-        cout << t.getName() << " " << t.getFirstName()
-             << " Years: " << t.getYearsExperience() << '\n';
-
+    for (auto &m : members)
+    {
+        m.printInfo();
+    }
+    
     // ================= MARRIED MEMBERS =================
-    cout << "\n--- Married Members ---\n";
-    for (auto &t : teachers)
-        if (t.getIsMarried())
-            cout << t.getName() << " " << t.getFirstName() << '\n';
 
-    for (auto &s : students)
+    for (auto &s : members)
         if (s.getIsMarried())
             cout << s.getName() << " " << s.getFirstName() << '\n';
 
