@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+
+        const printArray = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const skills = ['HTML', 'CSS', 'JS'];
+                if (skills.length > 0){
+                    resolve(skills);
+                } else {
+                    reject('it didnt go well');
+                }
+            },2000);
+        });
+    
+        printArray
+            .then(result => {
+                let element = document.getElementById('demo');
+                element.innerHTML = result;
+            })
+            .catch(error => {
+                let element = document.getElementById('demo');
+                element.innerHTML = error;
+            });
+    </script>
+    
+</body>
+</html>

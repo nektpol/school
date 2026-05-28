@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flash{
+            animation: flash 0.5s ease-in-out infinite;
+        }
+
+        @keyframes flash {
+            0% {opacity: 1;}
+            50% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+
+        const printArray = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const skills = ['HTML', 'CSS', 'JS','Python'];
+                if (skills.length > 0){
+                    resolve(skills);
+                } else {
+                    reject('it didnt go well');
+                }
+            },2000);
+        });
+    
+        printArray
+            .then(result => {
+                let element = document.getElementById('demo');
+                element.innerHTML = result.join("#");
+                element.classList.add('flash');
+            })
+            .catch(error => {
+                let element = document.getElementById('demo');
+                element.innerHTML = error;
+            });
+    </script>
+    
+</body>
+</html>

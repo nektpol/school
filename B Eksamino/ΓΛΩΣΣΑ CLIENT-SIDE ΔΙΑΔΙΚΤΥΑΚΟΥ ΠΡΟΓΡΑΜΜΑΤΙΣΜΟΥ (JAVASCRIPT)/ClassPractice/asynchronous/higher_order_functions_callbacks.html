@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="cubecallback"></p>
+    <script>
+        const square = (n) =>{
+            return n * n;
+        }
+
+        function cube(n, callback, callback2){
+            let y = callback(n) * n;
+            callback2(y);
+        }
+        
+        function myDisplayer(prm){
+            document.getElementById("cubecallback").innerHTML = prm;
+        }
+        cube(3, square, myDisplayer);
+    </script>
+</body>
+</html>

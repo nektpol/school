@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function myDisplayer(some){
+            document.getElementById("demo").innerHTML = some;
+        }
+
+        let myPromise = new Promise((resolve, reject)=>{
+            let req = new XMLHttpRequest();
+            req.open('GET', "cars.html");
+            req.onload = function(){
+                if (req.status == 200){
+                    resolve(this.responseText);
+                } else {
+                    reject('Error: ' + req.status);
+                }
+            }
+            req.send();
+        });
+
+        myPromise.then(
+            function(value) {myDisplayer(value);},
+            function(error) {myDisplayer(error);}
+        );
+
+        
+    </script>
+</body>
+</html>
