@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Form Validation with Patterns</title>
+
+<style>
+    label,input,textarea{
+        display:block;
+        margin:8px;
+    }
+
+    textarea{
+        resize:none;
+        width:220px;
+        height:100px;
+    }
+
+    .error{
+        color:red;
+    }
+
+    .success{
+        color:green;
+    }
+</style>
+</head>
+<body>
+<h1>Form Validation Using Patterns</h1>
+<form id="myForm" novalidate>
+    <!-- NAME FIELD -->
+    <label for="fname">Name</label>
+    <!-- name field pattern explanation "[A-Za-z ]{2,30}" . This pattern allows:uppercase letters, lowercase letters, spaces,between 2 and 30 characters
+    | Part     | Meaning                            |
+| -------- | ---------------------------------- |
+| `[ ]`    | Character set                      |
+| `A-Z`    | Any uppercase letter               |
+| `a-z`    | Any lowercase letter               |
+| ` `      | A space character                  |
+| `{2,30}` | Must appear between 2 and 30 times | -->
+    <input type="text" id="fname" name="name" pattern="[A-Za-z ]{2,30}" title="Name must contain only letters and spaces (2-30 characters)" required>
+    <p id="fnamemsg"></p>
+    <!-- AGE FIELD -->
+    <label for="age">Age</label>
+    <!-- age field pattern explanation 
+    1. ^ Start of string
+    2. () Groups multiple conditions together.Ομαδοποιεί πολλές συνθήκες μαζί
+    3. 1[89] Matches:18 or 19
+    4. | Part   | Meaning                   |
+| ------ | ------------------------- |
+| `1`    | Must start with 1         |
+| `[89]` | Next digit must be 8 or 9 |
+    5. | OR operator Either the left OR right side can match.
+    6. [2-9][0-9] Matches: 20 → 99
+    7. 100 -> Matches exactly: 100
+    8. $ End of string Nothing else allowed after the match.
+    -->   
+    <input type="text" id="age" name="age" pattern="^(1[89]|[2-9][0-9]|100)$" title="Age must be between 18 and 100" required>
+    <p id="agemsg"></p>
+    
+    <!-- EMAIL FIELD -->
+    <label for="email">E-mail</label>
+    <!-- email field pattern explanation pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+     1. [a-z] match to any lowercase letter, a b c d ....
+     2. [0-9] match to any number. 0 1 2 3 ...
+     3. . Literal dot. just a simple dot.Example:john.smith
+     4. _ match to underscore character.Example:john_smith
+     5. % Percent symbol.Rare but allowed in emails.Example:john%company
+     6. + Plus symbol.Example:john+work@gmail.com
+     7. - Hyphen character. Example:john-smith
+     8. + after the bracket it matches to One or more characters of the previous set
+     9. @ The email must contain the @ symbol.
+     10. [a-z0-9.-]+  This refers to domain name part and it means that one or more characters can be lowercase letters, numbers or dot or hyphen.Examples:gmail,yahoo,my-company
+     11. \. Escaped dot.Means: . it will print just a dot character. In regex a dot means that matches to any character
+     12.[a-z]{2,} Domain extension.Must contain at least 2 letters.
+     13.$ End of string.
+    -->
+    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  title="Enter a valid email address" required>
+    <p id="emailmsg"></p>
+
+    <!-- TEXTAREA -->
+    <label for="message">Message</label>
+    <!-- textarea pattern : ".{20, 1000}"
+    1. (.) the dot outside the curlybrackets mean that matches any character
+    2. {20,1000} Must contain: 20 to 1000 characters 
+    pattern attribute is not used thought for textare in HTML. so developers usually use minlength, maxlenght and required attributes.
+    -->
+    <textarea id="message" pattern=".{20,1000}" minlength="20" maxlength="1000" required></textarea>
+    <p id="msg"></p>
+    <input type="submit" value="Submit">
+
+</form>
+
+<script>
+    let form = document.getElementById('myForm');
+
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        let nameInput = document.getElementById('fname');
+        let ageInput = document.getElementById('age');
+        let emailInput = document.getElementById('email');
+        let messageInput = document.getElementById('message');
+
+        let nameMsg = document.getElementById('fnamemsg');
+        let ageMsg = document.getElementById('agemsg');
+        let emailMsg = document.getElementById('emailmsg');
+        let messageMsg = document.getElementById('msg');
+
+        // Validate name
+        if (nameInput.value === ""){
+            nameMsg.textContent = "Name is required.";
+            nameMsg.className = "error";
+        } else if (!nameInput.checkValidity()){
+            nameMsg.textContent = nameInput.validationMessage;
+            nameMsg.className = "error";
+        } else {
+            nameMsg.textContent = "Valid name.";
+            nameMsg.className = "success";
+        }
+
+        // Validate age
+        if (ageInput.value === ""){
+            ageMsg.textContent = "Age is required.";
+            ageMsg.className = "error";
+        } else if (!ageInput.checkValidity()){
+            ageMsg.textContent = ageInput.validationMessage;
+            ageMsg.className = "error";
+        } else {
+            ageMsg.textContent = "Valid age.";
+            ageMsg.className = "success";
+        }
+
+        // Validate email
+        if (emailInput.value === ""){
+            emailMsg.textContent = "Email is required.";
+            emailMsg.className = "error";
+        } else if (!emailInput.checkValidity()){
+            emailMsg.textContent = emailInput.validationMessage;
+            emailMsg.className = "error";
+        } else {
+            emailMsg.textContent = "Valid email.";
+            emailMsg.className = "success";
+        }
+
+        // Validate message
+        if (messageInput.value === ""){
+            messageMsg.textContent = "Message is required.";
+            messageMsg.className = "error";
+        } else if (!messageInput.checkValidity()){
+            messageMsg.textContent = messageInput.validationMessage;
+            messageMsg.className = "error";
+        } else {
+            messageMsg.textContent = "Valid message.";
+            messageMsg.className = "success";
+        }
+    })
+
+</script>
+
+</body>
+</html>
