@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εστία</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="clearfix">
+        <div class="sticky">
+
+            <div id="logo" class="col-4">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="menuBtn" class="menu-btn">
+                ☰
+            </button>
+
+            <nav id="topnav" class="col-8">
+                <button id="closeBtn" class="close-btn">
+                    ✖
+                </button>
+
+                <ul>
+                    <li><a href="#">Αρχική</a></li>
+                    <li><a href="#">Σχετικά</a></li>
+                    <li><a href="#">Μενού</a></li>
+                    <li><a href="#">Επικοινωνία</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img class="sliderImg" src="images/header_image.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img class="sliderImg" src="images/header_image2.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img class="sliderImg" src="images/header_image3.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <h1 class="menu-title">Το σημερινό μενού μας</h1>
+    <br>
+
+    <div class="row menu-row">
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/img_1.jpg" alt="Κοκκινιστό μοσχαράκι με ζυμαρικά">
+                <p class="dish-title">Κοκκινιστό μοσχαράκι με ζυμαρικά</p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/img_2.jpg" alt="Ψητή φέτα με μέλι">
+                <p class="dish-title">Ψητή φέτα με μέλι</p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/img_3.jpg" alt="Κοτόπουλο τυλιχτό">
+                <p class="dish-title">Κοτόπουλο τυλιχτό</p>
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <h1 class="menu-title">Τα καλύτερα πιάτα μας</h1>
+    <br>
+
+    <div class="row menu-row">
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/musaka.jpg" alt="Μουσακάς">
+                <p class="dish-title">Μουσακάς</p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/ntolmadakia.jpg" alt="Ντολμαδάκια">
+                <p class="dish-title">Ντολμαδάκια</p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="card">
+                <img src="images/soutzoukakia.jpg" alt="Σουτζουκάκια">
+                <p class="dish-title">Σουτζουκάκια</p>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="contact-section">
+    <h2>Επικοινωνήστε μαζί μας</h2>
+
+    <form id="myForm" novalidate>
+        <label for="fname">Όνομα</label>
+        <input type="text" id="fname" name="name" pattern="[A-Za-z ]{2,30}" title="Name must contain only letters and spaces (2-30 characters)" required>
+        <p id="fnamemsg"></p>
+
+        <label for="age">Ηλικία</label> 
+        <input type="text" id="age" name="age" pattern="^(1[89]|[2-9][0-9]|100)$" title="Age must be between 18 and 100" required>
+        <p id="agemsg"></p>
+        
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  title="Enter a valid email address" required>
+        <p id="emailmsg"></p>
+
+        <label for="message">Μήνυμα</label>
+        <textarea id="message" pattern=".{20,1000}" minlength="20" maxlength="1000" required></textarea>
+        <p id="msg"></p>
+
+        <input type="submit" value="Υποβολή">
+    </form>
+
+    </section>
+
+    <footer class="clearfix">
+        <div class="col-3">
+            <div class="spacer">
+
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="container">
+                <h3>
+                    <i class="fa-solid fa-location-dot"></i> Διεύθυνση
+                </h3>
+                <p>
+                    Λεωφόρος Ποσειδώνος 124, Καλαμάκι, Aθήνα.
+                </p>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="container">
+                <h3>
+                    <i class="fa-solid fa-share-from-square"></i> Social Media
+                </h3>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="container">
+                <h3>
+                   <i class="fa-regular fa-clock"></i> Ωράριο Καταστήματος
+                </h3>
+                <p>
+                    Δευτέρα-Σαββάτο:12.00-02.00
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="spacer">
+
+            </div>
+        </div>
+    </footer> 
+</body>
+<script>
+    // https://www.w3schools.com/howto/howto_js_slideshow.asp
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+
+    // event listeners: Από μάθημα αναπλήρωσης.
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const topnav = document.getElementById("topnav");
+
+    menuBtn.addEventListener("click", function() {
+        topnav.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", function() {
+        topnav.classList.remove("active");
+    });
+
+
+    // Form validation: Από μάθημα αναπλήρωσης.
+    let form = document.getElementById('myForm');
+
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
+
+        let nameInput = document.getElementById('fname');
+        let ageInput = document.getElementById('age');
+        let emailInput = document.getElementById('email');
+        let messageInput = document.getElementById('message');
+
+        let nameMsg = document.getElementById('fnamemsg');
+        let ageMsg = document.getElementById('agemsg');
+        let emailMsg = document.getElementById('emailmsg');
+        let messageMsg = document.getElementById('msg');
+
+        // Validate name
+        if (nameInput.value === ""){
+            nameMsg.textContent = "Name is required.";
+            nameMsg.className = "error";
+        } else if (!nameInput.checkValidity()){
+            nameMsg.textContent = nameInput.validationMessage;
+            nameMsg.className = "error";
+        } else {
+            nameMsg.textContent = "Valid name.";
+            nameMsg.className = "success";
+        }
+
+        // Validate age
+        if (ageInput.value === ""){
+            ageMsg.textContent = "Age is required.";
+            ageMsg.className = "error";
+        } else if (!ageInput.checkValidity()){
+            ageMsg.textContent = ageInput.validationMessage;
+            ageMsg.className = "error";
+        } else {
+            ageMsg.textContent = "Valid age.";
+            ageMsg.className = "success";
+        }
+
+        // Validate email
+        if (emailInput.value === ""){
+            emailMsg.textContent = "Email is required.";
+            emailMsg.className = "error";
+        } else if (!emailInput.checkValidity()){
+            emailMsg.textContent = emailInput.validationMessage;
+            emailMsg.className = "error";
+        } else {
+            emailMsg.textContent = "Valid email.";
+            emailMsg.className = "success";
+        }
+
+        // Validate message
+        if (messageInput.value === ""){
+            messageMsg.textContent = "Message is required.";
+            messageMsg.className = "error";
+        } else if (!messageInput.checkValidity()){
+            messageMsg.textContent = messageInput.validationMessage;
+            messageMsg.className = "error";
+        } else {
+            messageMsg.textContent = "Valid message.";
+            messageMsg.className = "success";
+        }
+    })
+</script>
+</html>
