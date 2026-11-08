@@ -6,9 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "buttonexercise.Main",
+            "javaExec": "C:/Program Files/Java/jdk-27.0.1.0.2/bin/java.exe",
+            "env": { "JAVA_TOOL_OPTIONS": "" },
+            "vmArgs": "--module-path \"${workspaceFolder}/lib\" -Djava.library.path=\"${workspaceFolder}/lib\" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics"
+        },
+        {
+            "type": "java",
             "name": "Launch Java Program",
             "request": "launch",
-            "mainClass": "App",
+            "mainClass": "buttonexercise.Main",
+            "javaExec": "C:/Program Files/Java/jdk-27.0.1.0.2/bin/java.exe",
+            "env": { "JAVA_TOOL_OPTIONS": "" },
             "console": "internalConsole",
             "vmArgs": "--module-path \"${workspaceFolder}/lib\" -Djava.library.path=\"${workspaceFolder}/lib\" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics"
         }

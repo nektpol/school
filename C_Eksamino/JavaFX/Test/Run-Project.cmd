@@ -14,12 +14,14 @@ if exist "bin\sources.txt" del "bin\sources.txt"
 for /r "src" %%F in (*.java) do call :addSource "%%F"
 "%JAVAC%" --module-path "lib" --add-modules javafx.controls,javafx.fxml -d "bin" @bin\sources.txt
 if errorlevel 1 goto failed
+copy /Y "src\buttonexercise\ButtonExercise.fxml" "bin\buttonexercise\ButtonExercise.fxml" >nul
+if errorlevel 1 goto failed
 if /I "%~1"=="--compile-only" (
     echo Compilation passed.
     popd
     exit /b 0
 )
-"%JAVA%" --module-path "lib" -Djava.library.path="lib" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics -cp "bin" App
+"%JAVA%" --module-path "lib" -Djava.library.path="lib" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics -cp "bin" buttonexercise.Main
 if errorlevel 1 goto failed
 popd
 exit /b 0
