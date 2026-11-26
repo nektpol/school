@@ -1,4 +1,4 @@
-package maximusmathsquare;
+package polyzos;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("MaximusMathSquare.fxml"));
         primaryStage.setTitle("MaximusMathSquare");
-        primaryStage.setScene(new Scene(root, 400, 300));
+        primaryStage.setScene(new Scene(root, 460, 560));
+        primaryStage.setMinWidth(460);
+        primaryStage.setMinHeight(560);
         primaryStage.show();
     }
 
