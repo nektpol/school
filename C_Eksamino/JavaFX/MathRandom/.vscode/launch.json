@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Java Program",
+            "request": "launch",
+            "mainClass": "App",
+            "javaExec": "C:/Program Files/Java/jdk-27.0.1.0.2/bin/java.exe",
+            "env": {
+                "JAVA_TOOL_OPTIONS": ""
+            },
+            "console": "internalConsole",
+            "vmArgs": "--module-path \"${workspaceFolder}/lib\" -Djava.library.path=\"${workspaceFolder}/lib\" --add-modules javafx.controls,javafx.fxml,exp4j --enable-native-access=javafx.graphics"
+        }
+    ]
+}

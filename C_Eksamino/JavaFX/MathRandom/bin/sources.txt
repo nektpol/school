@@ -1,0 +1,2 @@
+"C:/school/C_Eksamino/JavaFX/MathRandom/src/App.java"
+"C:/school/C_Eksamino/JavaFX/MathRandom/src/Controller.java"

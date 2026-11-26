@@ -1,0 +1,4 @@
+SkillAchieved?,FirstName,Skill,City,ID,LevelAchieved
+1,John,Python,Athens,123,Beginner
+0,Jane,JavaScript,Thessaloniki,456,Intermediate
+1,Alice,C++,Patras,789,Advanced
